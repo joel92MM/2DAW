@@ -38,4 +38,22 @@
         }
         echo "</table>";
     }
+
+    /**
+     * Genera numeros aleatorios
+     */
+    function generarAleatorios($min,$max){
+        $numeros=mt_rand($min,$max);
+        return $numeros;
+    }
+    //ordenamiento de 6 numeros 
+    function ordenamiento($min,$max){
+        $valores=array();
+        $number=0;
+        for ($i=1; $i < 6; $i++) { 
+            $number=generarAleatorios($min,$max);
+            array_push($valores,$number);
+        }
+        return $valores;
+    }
 ?>
