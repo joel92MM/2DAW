@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table, tr,th{
+            border-style: solid;
+            border-collapse: collapse;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <p>    <h1>1.- INFORMACIÓN</h1>
+ 
+
+        En la página web proporcionada (èjercicio_1.html) puedes ver un texto con unos enlaces.
+        Mediante la navegación de los elementos del DOM debes averiguar:
+            - // Numero de enlaces de la pagina
+            - // Direccion del penultimo enlace
+            - // Numero de enlaces que apuntan a http://prueba
+            - // Numero de enlaces del tercer párrafo
+
+            Todas las respuestas debes añadirlas en la sección "información"
+            </p>
+            <p>
+            <script src="recursos/ejercicoi1.html">Ejercicio1 </script>
+            
+        <h1>2.- OCULTAR SECCIÓN</h1>
+        En esta ocasión queremos ver inicialmente solo la mitad del texto ( tu decides que parte)
+          y que cuando clicamos el botón se muestre todo el texto y se oculte el botón
+            
+          Este comportamiento lo debemos hacer mediante atributos CSS 
+            
+          Pistas: 
+          - atributo display
+          - inline container
+        </p>
+        <p>
+             <script src="">Ejercicio </script>
+
+        <h1>3.- AÑADIR NUEVOS ELEMENTOS HTML</h1>
+        
+        Completar el código JavaScript proporcionado para que se añadan nuevos elementos a la lista cada vez 
+        que se pulsa sobre el botón. Utilizar las funciones DOM para crear nuevos nodos y añadirlos a la lista 
+        existente. Al igual que sucede en el ejercicio anterior, la acción de pinchar sobre un botón forma parte 
+        de los 
+        "Eventos" de JavaScript. En este ejercicio, sólo se debe saber que al pinchar sobre el botón, se ejecuta la 
+        función llamada anade().
+        
+        </p>
+        <p>
+             <script src="">Ejercicio </script>
+
+        <h1>4.- TABLA</h1>
+        
+        Con la siguiente tabla: 
+        
+        UNO
+        DOS
+        TRES
+
+        
+        Realiza: 
+        Función para colocar el elemento 4
+        Colocar en cada celda un enlace que al pincharlo el tr pinchado descienda un nivel. Ojo con la última celda.
+        Consigue que esta tabla tenga fondo de color diferente según la fila sea par o impar, aunque se muevan las filas.
+        Consigue también que el color del fondo cambie cuando se pone el ratón encima.
+        </p>
+        
+        <table>
+            <tr>
+                <th>
+                    <a href="#" onclick="mover">UNO</a>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a href="#" onclick="mover">DOS</a>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a href="#" onclick="mover">TRES</a>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a href="#" onclick="mover">CUATRO</a>
+                </th>
+            </tr>
+        </table>
+             <script>
+                 const x= document.getElementById("th");
+                 for (let i = 0; i < x.length; i++) {
+                     if(i%2==1){
+                         x[i].style.backgroundColor=blue;
+                     }else{
+                        x[i].style.backgroundColor=green;
+                     }
+                     
+                 }
+                
+            </script>
+
+   
+        <h1>5.- TIME</h1>
+        <p>
+        El objetivo de esta actividad es calcular el tiempo que tarda un script a ejecutarse. Para ello, utilizaremos la función Date (), que tiene precisión de milisegundos.
+        
+        En Calculating PI to an Arbitrary number of digits tiene un algoritmo para encontrar los decimales de PI que es fácil de reutilizar en su código. Solo tendrá que calcular los primeros 60 números de PI (cosa bastante evidente a partir del código disponible),
+         y ver qué tarda en calcularlos. 
+        
+        Debes crear una tabla para ver cuanto tarda en calcular desde 1 a 60 dígitos, es decir cuánto tarda en calcular el primero, el segundo, etc. y así iremos viendo que cada vez le cuesta más (aunque el algoritmo es muy rápido).
+</p>
+</body>
+</html>

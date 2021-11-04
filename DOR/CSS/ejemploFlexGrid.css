@@ -1,0 +1,131 @@
+
+/**Ejemplo hecho con grid
+*/
+.contenedor{
+    background-size: 100%;
+    display: grid;
+    grid-template-columns: 1fr  auto;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+    column-gap: 20px;
+    
+}
+.clasificacion{
+    gap: 30px;
+}
+.grupo1{
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px;
+    min-height: 200px;
+    position: relative;
+    font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+
+}
+.texto{
+    background-color:b38c7f ;
+    color: white; 
+    text-shadow:black 0.1em 0.2em 0.3em;
+    font-size: larger;
+    height: 100%;
+ 
+}
+/* Aqui utilizo un display flex, para cuando sea responsive */
+.grupo1 .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+ .grupo1 p{
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+
+.banner h1{
+    font-size: big;
+    font-weight: bold;
+    background-color: white;
+    width: 100%;
+    text-shadow:goldenrod 0.1em 0.1em 0.1em;
+    border-radius: 10px;
+    
+
+}
+/* aqui utilizo un display grid porque a la hora de  alinear contenido es mas facil de ajustar */
+
+.banner {
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+
+	background-size: cover;
+	background-position: center center;
+}
+
+.banner img{
+    grid-row: 3/4;
+    margin-top: 50px;
+    
+    
+}
+/* aqui utilizo un display grid porque a la hora de  alinear contenido es mas facil de ajustar */
+.clasificacion{
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    justify-content:space-between;
+}
+h1{
+    text-align: center;
+    border: 1px solid;
+    border-radius: 1px;   
+}
+
+@media screen and (max-width: 540px) {
+    .clasificacion {
+        grid-template-columns: 1fr ;
+        justify-content:space-between;
+    }
+    h1{
+        background-color: silver;
+    }
+}
+@media screen and (min-width: 541px) {
+    .clasificacion {
+        grid-template-columns: 1fr ;
+        justify-content:space-between;
+        background-color:tan;
+    }
+    h1{
+        background-color:cadetblue;
+    }
+}
+
+@media screen and (min-width: 580px) {
+    .clasificacion {
+        grid-template-columns: 1fr  1fr;
+        justify-content:space-between;
+        background-color:rgb(216, 204, 163);
+    }
+    h1{
+        background-color:aquamarine;
+    }
+  }
+  @media screen and (min-width: 880px) {
+    .clasificacion {
+        grid-template-columns: 1fr  1fr 1fr;
+        justify-content:space-between;
+    }
+    h1{
+        background-color:darkorange;
+      
+    }
+  }

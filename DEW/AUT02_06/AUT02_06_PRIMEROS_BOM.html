@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+          
+            div{
+                background-color: #0d1293;
+                text-align: center;
+           
+            }
+            div h1{
+                color: white;
+            }
+            div label{
+                color: white;
+                font-size: large;
+            }
+            div button{
+                padding: 5px;
+                border-radius: 25px;
+                width: 250px;
+                height: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <h1>Ventana Principal</h1>
+        <button type="button" onclick="abrirVentana()">Abrir Ventana</button>
+        <button type="button" onclick="cerrarVentana()">Cerrar Ventana</button>
+        <br/>
+        <br/>
+        <button type="button" onclick="ampliarVentana()">Ampliar Ventana</button>
+        <button type="button" onclick="reducirVentana()">Reducir Ventana</button>
+        <br/>
+        <br/>
+        <label>Indique posición X</label>
+        <input type="text" size="4">
+        <label>Indique posición Y</label>
+        <input type="text" size="4">
+        <button type="button" onclick="moverVentana()">Mover Ventana</button>
+    </div>
+    <br/>
+    <script>
+        var miVentana;
+
+        let width=200;
+        let height=400;
+        /**
+         * Funcion que abre una nueva ventana
+         * */
+        function abrirVentana(){
+           // miVentana=window.open("http://www.google.es","miVentana","width=200, height=200");
+            miVentana=window.open("","","width=200, height=200");
+
+           // miVentana.document.write("<p>Abriendo nueva ventana</p>")
+           
+           
+            return miVentana
+        }
+
+        /**
+         * Funcion que cierra una ventana
+         * */
+         function cerrarVentana(){
+         
+             if(!miVentana){
+                return alert("No hay ventana que cerrar")
+             }else{
+                 return miVentana.close();
+             }
+         
+        }
+        /**
+         * 
+         * 
+         */
+        function ampliarVentana(){
+                //anchura=anchura+30;
+                //altura=altura+30;
+                //miVentana=window.open(null);
+                miVentana.resizeby(230,230);
+                miVentana.focus();
+
+            return miVentana;
+        }
+
+        function reducirVentana(){
+             miVentana.moveTo(250,250);
+             miVentana.focus();
+             return miVentana;
+        }
+
+
+    </script>
+    </body>
+</html>

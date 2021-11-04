@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>
+            1.- BOLAS</h1>
+            <p>
+                Queremos crear un objeto llamado bola que guarde: 
+                <br/>
+                Coordenadas x  e  y: las coordenadas horizontal y vertical 
+                donde comienza la bola en la pantalla. Esto puede oscilar entre 0 
+                (esquina superior izquierda) y el ancho y alto de la ventana del navegador 
+                (esquina inferior derecha)- 600.
+                velocidad horizontal y vertical (velX y velY): a cada bola se le asigna una 
+                velocidad horizontal y vertical; en términos reales, estos valores se agregan 
+                regularmente a los valores de las coordenadas x / y cuando animamos las bolas, 
+                para moverlas tanto en cada cuadro.
+                color: cada bola tiene un color.
+                tamaño: cada bola tiene un tamaño: este es su radio, en píxeles.
+                Esta 'bola' tendrá un método 'dibuja' donde vamos a mostrar las coordenadas 
+                de la bola, y otro método 'mover', donde la bola va ha avanzar y tomará la 
+                nueva posición ( x e y ) de x+velX.
+
+        </p>
+        <script src="bolas.js"></script>
+        <hr/>
+        <br/>
+        <h1>2.- PIEDRAS, PAPEL,...</h1>
+        <p>Vamos a crear un juego básico de Piedra, Papel y Tijera, donde se realizaran 'tiradas' entre dos jugadores y gana la partida el que gane 3 tiradas:
+            <br/>
+            Primero vamos ha hacer que el juego sea random, es decir que la tirada de cada jugador sea aleatoria (por la maquina) para comprobar que todo es correcto y se escriben los resultados correctos.
+            Crearemos un objeto juego, que tenga como características las opciones ( en este caso: Piedra, papel y tijera), los nombre de los jugadores, y los puntos que tiene cada jugador.
+            <br/> 
+            Y tendremos las siguientes funciones:
+            <br/> 
+            preguntarNombre() - Preguntaremos el nombre del jugador/A
+            <br/> 
+            numeroRandom() - Escogeremos una opción ( p, p, t) random
+            <br/> 
+            tiradaJugador() - mostraremos el valor de una tirada de un jugador
+            <br/> 
+            imprimirResultados(jugador1, jugador2) – Devuelve que jugador ha ganado
+            <br/> 
+            evaluaTirada( tiradajugador1, tiradajugador2) – Devuelve cual de los dos jugadores ha ganado la tirada ( piedra gana tijera, tijeras gana papel y papel gana piedra) y le da un punto al jugador ganador.
+            <br/> 
+            juego() - Primero pedimos los nombres de los jugadores, y jugamos al mejor de 3.</p>
+            <br/>
+            <hr/>
+            <div>
+                <script src="juego.js"></script>
+            </div>
+        
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejemplo de JavaScript Select/Option</title>
+<meta charset="UTF-8">
+</head>
+<body>
+    <form id="formulario">
+        Selecciona tu fruta favorita:
+        <select id="mySelect">
+          <option id="manzana">Manzana</option>
+          <option id="naranja">Naranjas</option>
+          <option id="pera" selected>Peras</option> // Pre-selleccionada
+          <option id="platano" label="banana">Platano</option>
+        </select>
+      </form>
+      <button onclick="myFunction()">Pulsar</button>
+      <button onclick="indice()">Ver Indice</button>
+      <button onclick="numeroElementos()">Numero elementos</button>
+      <button onclick="numeroOpciones()">Numero opciones desplegables 4</button>
+      <button onclick="idForm()">Id Formulario</button>
+      <br/>
+      <button onclick="cambiarEtiqueta()">cambiar nombre etiqueta</button>
+      <button onclick="opcionDefecto()">¿Es la fruta por defecto?</button>
+
+      
+      <script src="ejemplos.js"></script>
+
+      <br/>
+      <br/>
+
+      <p>Identificacion del formulario: <span id="parr"></span></p>
+      <p>Indice del valor seleccionado: <span id="indices"></span></p>
+      <p>Numero de elementos: <span id="elementos"></span></p>
+      <br/>
+      <p id="texti"></p>
+
+
+      <script>
+
+      </script>
+</body>
+</html>

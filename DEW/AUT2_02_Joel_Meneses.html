@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+      <h1>Actividad 1</h1>
+        <hr/>
+        Implementar el control de 3 variables (a, b, c) para que se muestre un mensaje de error cuando se produzca alguna de las siguientes situaciones 
+        (el mensaje de error debe indicar qué situación(es) no se cumplieron):
+
+        a) Al menos una de las 3 variables es negativa
+        
+        b) Las tres variables son iguales a 0
+        
+        c) Las suma de las 3 variables es mayor que 10 Y las tres variables son diferentes 
+
+       <!--  <script>
+             let mensaje=[];
+
+            function controlVariables(a,b,c) {
+               
+                let suma=a+b+c;
+
+                if ((a<0 || b<0 )|| c<0) {
+                    console.log("Una de las tres variables es negativas");
+                } else {
+                    console.log("las tres variables no son negativas");
+                    mensaje.push('a');
+                }
+
+                if ((a!=0 && b!=0 )&& c!=0) {
+                    console.log("las tres variables no son iguales a 0");
+                } else {
+                    console.log("las tres variables  son iguales a 0");
+                    mensaje.push('b');
+                }
+
+                if (suma>10 && (a!=b && a!=c)) {
+                    console.log("la suma de las tres variables es 10, y las tres son diferentes");
+                } else {
+                    console.log("la suma de las tres variables no es 10, y las tres no son diferentes");
+                    mensaje.push('c');
+                }
+                return mensaje;
+
+                
+            }
+            let a=parseInt(prompt("Introduzca un valor"));
+            let b=parseInt(prompt("Introduzca un valor"));
+            let c=parseInt(prompt("Introduzca un valor"));
+
+            controlVariables(a,b,c);
+
+            console.log("Situaciones que no se cumpplieron: "+mensaje);
+
+        </script>
+  -->
+         <h1>Actividad 2</h1>
+         <hr/>
+         Diseñar el código para que con un valor recibido 'x'  muestre los siguientes mensajes:
+
+         a) ‘Este es muy fácil... ¡prueba otro!’, si x es 0
+         
+         b) ‘El número es par’, si x es 2, 4 ó 6
+         
+         c) ‘El número es impar’, si x es 1, 3 ó 5
+         
+         d) ‘¡¡Sólo sé contar de 0 a 6!!’, para los demás casos
+      <!--   <script>
+            let x=parseInt(prompt("Introduzca un valor"));
+            function esPar(x){
+
+                
+                if(x==0){
+                    alert("Este es muy facil...¡prueba otro!");
+                }else if(x==2|| x==4 ||x==6){
+                    alert("El numero es par");
+                }else if (x==1 ||x==3 || x==5){
+                    alert("el numero es impar");
+                }else{
+                    alert("Solo se contar de 0 a 6")
+                }
+                return x;
+            }
+            esPar(x);
+             
+
+         </script>  -->
+        
+        <h1>Actividad 3</h1>
+        <hr/>
+        Realizar un bucle for que actualice una variable i y otra j de la siguiente forma:
+
+        a) i comienza en 0, j comienza en 20
+
+        b) El bucle debe parar cuando i sea mayor que 8 ó j sea menor que 0
+
+        c) i se incrementa de 1 en 1, j se decrementa de 3 en 3
+
+        d) Dentro del bucle sólo puede estar la sentencia console.log(i, j) 
+      <!--  <script>
+                for (let i = 0; i<8;i++) {
+                    for (let j = 20; j > 0; j--) {
+                        console.log(i,j);  
+                    }
+
+                }
+        </script>   -->
+
+        <h1>Actividad 4</h1>
+        <hr/>
+        Para convertir grados Farenheit (`F`) a Celsius (`C`) se usa la siguiente expresión: `C = (F − 32) * 5/9`. 
+        Implementar una función que realice esta conversión (comprueba que 32ºF son 0ºC y que 75.2ºF son 24ºC).
+<!--         <script>
+            let expresion;
+            let pregunta;
+            let opcion=0;
+            let salir=false;
+          function gradosFarenheit(){
+
+              do {
+                    alert("Menu de opciones<br/> 1. Formula Farenheit <br/>2. Salir");
+                    opcion=parseInt(prompt("Introduzca una opcion"));
+                
+                    switch (opcion) {
+                        case 1:
+                        pregunta=parseFloat(prompt("Introduzca un numero Farenherit"));
+                        console.log(formula(pregunta));
+                            break;
+                        case 2:
+                            salir=true;
+                            break;
+                    
+                        default:
+                            alert("Ha introducido la opcion incorrecta");
+                            break;
+                    }
+                    
+              } while (!salir);
+
+            function formula(f){
+                expresion=(f-32)*5/9;
+                return expresion;
+            }
+          }
+        gradosFarenheit(); 
+
+        </script>-->
+        
+        
+         <h1>Actividad 5</h1>
+         <hr/>
+         En el ejercicio anterior, añadir un argumento opcional booleano de forma que si está a `False` (valor por defecto) devuelve sólo el 
+         resultado numérico (p.ej: `24`), mientras que si se indica `True` le añade la unidad `ºC` (p.ej `24ºC`).
+        <!--  <script>
+            let expresion;
+            let pregunta;
+            let opcion=0;
+            let salir=false;
+            let convertir=[];
+          function gradosFarenheit(){
+
+              do {
+                    alert("Menu de opciones<br/> 1. Formula Farenheit <br/>2. Salir");
+                    opcion=parseInt(prompt("Introduzca una opcion"));
+                
+                    switch (opcion) {
+                        case 1:
+                        pregunta=parseFloat(prompt("Introduzca un numero Farenherit"));
+                        if(typeof formula!='string'){
+                            convertir.push(formula);
+                            console.log(convertir +('ªC'));
+                        }else{
+                            console.log(formula);
+                        }
+                            break;
+                        case 2:
+                            salir=true;
+                            break;
+                    
+                        default:
+                            alert("Ha introducido la opcion incorrecta");
+                            break;
+                    }
+                    
+              } while (!salir);
+
+            function formula(f){
+                expresion=(f-32)*5/9;
+                return expresion;
+            }
+          }
+        gradosFarenheit(); 
+
+        </script>  --> 
+         
+            <h1>Actividad 6</h1>
+            <hr/>
+            Escribir un programa que proporcione el desglose en el número mínimo de billetes y monedas de una cantidad entera cualquiera de euros dada. 
+            Recuerda que los billetes y monedas de uso legal disponibles hasta 1 euro son de: 500, 200, 100, 50, 20, 10, 5, 2 y 1 euros. Para ello deben solicitar al usuario un número 
+            entero (comprobar que lo es) y desglosar la cantidad en el número mínimo de billetes y monedas 
+           <!--  <script>
+                function comprobarEntero(){
+                    let salir=false;
+                    let billetes_500,billetes_200,billetes_100,billetes_50,billetes_20,billetes_10,billetes_5;
+                    let moneda_2,moneda_1;
+
+                    do {
+                        n1=parseInt(prompt("Introduzca un numero"));
+
+                        if(Number.isInteger(n1)){
+                            console.log("El dato "+ n1+" es entero");
+                            return true;
+                        }
+
+                    billetes_500=n1/500;
+                    n1=n1%500;
+                    billetes_200=n1/200;
+                    n1=n1%200;
+                    billetes_100=n1/100;
+                    n1=n1%100;
+                    billetes_50=n1/50;
+                    n1=n1%50;
+                    billetes_20=n1/20;
+                    n1=n1%20;
+                    billetes_10=n1/10;
+                    n1=n1%10;
+                    billetes_5=n1/5;
+                    n1=n1%5;
+                    moneda_2=n1/2;
+                    n1=n1%2;
+                    moneda_1=n1/1;
+                    n1=n1%1;
+
+                    console.log("Billetes de 500: "+billetes_500+"\n"+ "Billetes de 200: "+billetes_200+"\n"
+                    +"Billetes de 100: "+billetes_100+"\n"+"Billetes de 50: "+billetes_50+"\n"+"Billetes de 20: "+billetes_20+"\n"
+                    +"Billetes de 10: "+billetes_10+"\n"+"Billetes de 5: "+billetes_5+"\n"+"Billetes de 2: "+moneda_2+"\n"
+                    +"Billetes de 1: "+moneda_1+"\n")
+
+                    } while (!salir);
+
+                }
+                comprobarEntero();
+               
+            </script>  
+            --> <h1>Actividad 7</h1>
+            <hr/>
+            ¿Cuántos segundos han pasado desde que naciste? ¿y minutos? ¿y horas? ¿y días? Implementaruna función que dada una fecha cualquiera en 
+            formato “yyyy-mm-dd”, devuelva cuánto tiempo ha pasado desde esa fecha. La función aceptará un segundo parámetro para indicar en qué unidad se quiere obtener el resultado: 
+            ‘d’ → días, ‘h’ → horas, ‘m’ → minutos y ‘s’ → segundos. Si no es ninguna de estas unidades, se mostrará un error 
+          <!--   <script>
+                function tiempoPasado(){
+                    let salir=false;
+                    let pregunta, unidadResultado;
+                    let cadena=[];
+                    let y=0;
+                    let m=0;
+                    let d=0;
+
+                    var segs = 1000;
+                    var mins = segs * 60;
+                    var hours = mins * 60;
+                    var days = hours * 24;
+                    var months = days * 30.416666666666668;
+                    var years = months * 12;
+
+                    do {
+                        alert("Menu de opciones\n" 
+                        +"'d' => si quieres obtener tu fecha de nacimiento en dias\n"
+                        +"'h' => si quieres obtener tu fecha de nacimiento en horas\n"
+                        +"'m' => si quieres obtener tu fecha de nacimiento en minutos\n"
+                        +"'s' => si quieres obtener tu fecha de nacimiento en segundos\n"
+                        +"'2'=> Salir");
+                        unidadResultado=prompt("¿En que unidad deseas obtener el resultado?");
+
+                        pregunta=prompt("Introduce tu fecha de nacmiento en formato 'yyyy-mm-dd'");
+                        cadena=pregunta.split("-");
+
+                        y=cadena[0];
+                        m=cadena[1];
+                        d=cadena[2];
+
+                        let nacimiento=new Date(y,m,d);
+                        let hoy=new Date();
+                        let tiempoPasado=hoy-nacimiento;
+                       
+
+                        switch ( 
+                            unidadResultado) {
+                            case 'd':
+                                let diasPasados=Math.floor(tiempoPasado/days);
+                                console.log("El tiempo transcurrido en dias desde que naces es: "+ diasPasados);
+                                break;
+                            case 'h':
+                                let horasPasadas=Math.floor(tiempoPasado/hours);
+                                console.log("El tiempo transcurrido en horas desde que naces es: "+ horasPasadas);
+                                break;
+                            case 'm':
+                                let minutosPasados= Math.floor(tiempoPasado/mins);
+                                console.log("El tiempo transcurrido en minutos desde que naces es: "+ minutosPasados);
+                                break;
+                            case 's':
+                                let segundoPasados=Math.floor(tiempoPasado/segs);
+                                console.log("El tiempo transcurrido en segundos es: "+segundoPasados); 
+                                break;
+                            case '2':
+                                salir=true;
+                                break;
+                            default:
+                                console.log("Eliga una opcion correcta");
+                                break;
+                        }
+                        
+                    } while (!salir);
+                }
+             tiempoPasado();
+            </script>  -->
+            <h1>Actividad 8</h1>
+            <hr/>
+            Ahora debes pedir un número al usuario y que diga si es par o impar.
+           <!--  <script>
+                let numero=0;
+                numero=parseInt(prompt("Introduce un numero"))
+                if (numero%2==0) {
+                    alert("El numero es par")
+                } else {
+                    alert("El numero es impar")
+                }
+            </script> -->
+
+            <h1>Actividad 9</h1>
+            <hr/>
+            Pide un mes y un año, y escriba el mes anterior y el mes siguiente. 
+            Ej: Si el usuario introduce el mes 10 y el año 2017, el resultado será mes anterior: 9/2017 y el mes posterior 11/2017.
+            <script>
+                let anio=0;
+                 anio=parseInt(prompt("Introduzca un año"));
+                 
+                let mes=0;
+
+                var anios= new Date();
+
+
+            </script> 
+
+            <h1>Actividad 10</h1>
+            <hr/>
+            Pide una letra y detecte si es una vocal.
+          <!--   <script>
+                            let letra=["a","e","i","o","u"];
+                            let detector=prompt("Introduzca una letra");
+                            for (let i = 0; i < detector.length; i++) {
+                                if(detector[i]=='a' || detector[i]=='e' || detector[i]=='i' || detector[i]=='o' || detector[i]=='u'){
+                                    alert("la letra introducida "+detector[i]+" es una vocal");
+                                }else{
+                                    alert("la letra introducida ",detector[i]," no es una vocal");
+ 
+                                }
+                                
+                            }
+
+            </script> -->
+
+
+
+            <h1>Actividad 11</h1>
+            <hr/>
+            En este reto deberás pedir un año y escriba si es bisiesto o no. Sabemos que son bisiestos todos los años múltiplos 
+            de 4, excepto los que sean múltiplos de 100 sin que sean múltiplos de 400.
+      <!--       <script>
+                let anio=parseInt(prompt("Introduzca un año"));
+                if((anio%100!=0 && anio%4==0) || (anio%400==0)){
+                    alert("Es bisiesto");
+                }else{
+                    alert("No es bisiesto"); 
+                }
+
+            </script> -->
+            
+
+            <h1>Actividad 12</h1>
+            <hr/>
+            En este reto deberás pedir al usuario un número N y muestre por pantalla el siguiente:
+                1
+
+                1 2
+
+                1 2 3
+
+                .......
+
+                1 2 3 ......... N
+                <br/>
+              <!--  <script>
+                   let num=parseInt(prompt("Introduzca un numero"));
+
+                    for (let i = 0; i <= num; i++) {
+                        for (let j = 1; j <= i; j++) {
+                            console.log(j+"\n");
+                        }
+                        console.log("\n")  
+                    }
+                </script>  -->
+
+            <h1>Actividad 13</h1>
+            <hr/>
+            En este reto deberás pedir 3 números y diga si la suma de los dos primeros es igual al 
+            tercero y si se han introducido en orden creciente. 
+        
+           <!--   <script>
+                let numero=parseInt(prompt("Introduzca un numero"));
+                let numero2=parseInt(prompt("Introduzca un numero")); 
+                let numero3=parseInt(prompt("Introduzca un numero"));
+                let suma=0;
+                suma=numero+numero2;
+                if(suma==numero3){
+                    alert("la suma de los dos numeros primeros es igual al tercero");
+                }else{
+                    alert("la suma de los dos numeros primeros no es igual al tercero");
+                }
+
+                if(numero<numero2 && numero2< numero3 ){
+                    alert("Se han introducido en orden creciente")
+                }else{
+                    alert("No se han introducido en orden creciente")
+                }
+            </script>   -->
+            
+
+
+            <h1>Actividad 14</h1>
+            <hr/>
+            En este reto deberás mostrar por pantalla los 100 múltiplos de 4 en orden decreciente a partir de un 
+            número que pedimos por teclado.
+  <!--           <script>
+                //let multiplos=parseInt(prompt(""));
+                for (let i = 100; i > 0; i--) {
+                    if(4%i==0){
+                        document.write(i+" \n");
+                    }else{
+                        document.write("");
+                    }
+                    
+                }
+            </script> -->
+
+            <h1>Actividad 15</h1>
+            <hr/>
+            La letra del NIF se calcula dividiendo la parte numérica (8 primeras cifras) por 23. A partir del resto 
+            de esta división se asigna una letra según su posición en la siguiente cadena: `'TRWAGMYFPDXBNJZSQVHLCKE'`.
+
+            Por ejemplo, el DNI 64253469 da como resto 2 al dividir por 23 (tercera posición, ya que empieza por 0), 
+            por lo que le corresponde la letra `W`.
+
+            <script>
+                let numero;
+                let salir =false;
+                function comprobarNumero(){
+                    do {
+                      numero=window.parseInt(prompt("Introduzca un numero valido"));
+                      if(isNaN(numero)&& numero>1111111){
+                          salir =true;
+                      }  
+                    } while (salir);
+                    alert("Haz introducido mal el numero");
+
+                }
+                console.log(comprobarNumero());
+            </script>
+
+
+    </body>
+</html>

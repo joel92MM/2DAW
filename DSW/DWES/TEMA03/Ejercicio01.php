@@ -22,7 +22,7 @@
 
                     echo "<table>
                             <tr>
-                                <td>"
+                                <td>";
                                 imprimirMatriz($a);
                     echo        "</td>
                                 <td>+</td>
@@ -31,19 +31,19 @@
                     echo        
                                 "</td>
                                 <td>=</td>
-                                <td>"
+                                <td>";
                                 imprimirMatriz($c);
                     echo            "</td>
                             </tr>
-                        </table>"
+                        </table>";
                 }else if($_GET){
-                    require_once("../Tema03/FuncionesAuxiliares/funcionesAuxiliares")
+                    require_once("../Tema03/FuncionesAuxiliares/funcionesAuxiliares");
                     $filas=$_POST['filas'];$cols=$_POST['cols'];
                     echo "<form action='' method='POST' enctype='multipart/form-data'";
 
                     echo "<table>
                             <tr>
-                                <td>"
+                                <td>";
                                 imprimirMatriz("a",$filas,$cols);
                     echo        "</td>
                                 <td>+</td>

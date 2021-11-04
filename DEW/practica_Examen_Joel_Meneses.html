@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+<h1>Programa que pide una frase y devuelve el número de cada una de las vocales que contiene. (nº de a’s, de e’s, etc.)
+</h1>
+<script>
+   function contar(frase) {
+    let palabra=frase;
+    palabra=palabra.toLocaleLowerCase();
+    console.log(palabra);
+      let contadorA = 0, contadorE = 0, contadorI = 0,contadorO = 0,contadorU = 0
+      for(i=0; i<palabra.length; i++) {
+          
+        if(palabra[i] === "a") {
+          contadorA++
+        }else if (palabra[i] === "i") {
+          contadorI++
+        }else if(palabra[i]==="o"){
+            contadorO++;
+        }else if(palabra[i]==="u"){
+            contadorU++;
+        }else if(palabra[i]==="e"){
+            contadorE++;  
+        }
+      }
+      let resultado=" a: "+ contadorA+" i: "+ contadorI+" e: "+ contadorE+" o: "+ contadorO+" u: "+ contadorU;
+      return resultado;
+    }
+    let frase=prompt("Introduzca una frase");
+    console.log(contar(frase))
+</script>
+
+
+ <h1>Haz un programa que dado un número del 1 al 99, lo muestre escrito en letras. Por ejemplo, dado el 35 debería mostrarse treinta y cinco.</h1>
+    
+
+
+<h1>Programa que lee una frase y averigua si es “palíndroma”. Una frase es palíndroma si se lee igual de izquierda a derecha que de derecha a izquierda 
+(sin considerar los espacios en blanco). Ejemplo: “le saco sus ocas el”, “dabale arroz a la zorra el abad”.</h1>
+
+<script>
+    function palindromo(frase){
+        let cadena=frase;
+        cadena=cadena.toLocaleLowerCase();
+        console.log(cadena);
+        for (let i = 0,j=cadena.length-1; i <=j; i++,j--) {
+            if(cadena.charAt(i)== cadena.charAt(j)){
+                console.log("Es una frase polindroma");
+            }
+        }
+    }
+    frase=prompt("Introduzca una frase");
+    palindromo(frase);
+
+</script>
+
+<h1>20: Programa que tenga una función que le pasemos un vector de N elementos y rota sus componentes un lugar hacia su derecha. Teniendo en cuenta que el
+    último componente debe desplazarse al primer lugar.
+   */</h1>
+
+        
+    </body>
+</html>

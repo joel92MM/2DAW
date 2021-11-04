@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+          
+          .content{
+            display: grid;
+            grid-row: 1fr 1fr;
+            row-gap: 10px;
+          }
+          #contenedor1 {
+            width: 500px;
+            display: grid;
+            width: 100%;
+            grid-template-columns: 50% 50%;
+            gap: 20px;
+            align-content: space-between;
+          }
+          #contenido{
+            padding: 5px;
+            text-align: center;
+            background: linear-gradient(to bottom, #f4f900,#3c9a01);
+            border-radius: 0 10px 10px 0 ;
+          }
+          #contenido h1{
+            top: 10px;
+            color: white;
+          }
+
+          #contenido2{
+            padding: 5px;
+            text-align: center;
+            background: linear-gradient(to bottom,#f92307,#fff500);
+            border-radius: 0 10px 10px 0 ;
+          }
+          #contenido2 h1{
+            top: 10px;
+            color: white;
+          }
+
+           #contenedor3 {
+            width: 700px;
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr;
+          }
+
+          #contenido3{
+            padding: 5px;
+            background: linear-gradient(to bottom,#d40a3c, #1804ed, #d40a3c);
+            border-radius: 0 10px 10px 0 ;
+            color: white;
+          }
+
+          #contenido3 h1{
+            top: 10px;
+            color: white;
+          }
+
+          .ejemplo{
+            height: 100px;
+            border: solid black;
+            background: repeating-radial-gradient(20% 80%, ellipse closest-side, red, blue, red 50px);          }
+        </style>
+    </head>
+    <body>
+      <div class="content">
+          <div id="contenedor1">
+            <div id="contenido"></div>
+            <div id="contenido2"></div>
+          </div>
+          <div id="contenedor3">
+            <div id="contenido3"></div>
+          </div>
+          <div class="ejemplo"></div>
+      </div>
+      <script>
+        let mensaje="<h1>PANTALLA:</h1>"
+        document.getElementById("contenido").innerHTML=mensaje+"<p>Alto disponible: "+screen.availHeight+ "px. </p>"+
+        "<p>Ancho disponible: "+screen.availWidth+ "px. </p>"+
+        "<p>Alto total disponible: "+screen.height+ "px. </p>"+
+        "<p>Profundidad de color: "+screen.colorDepth+ "px. </p>"+
+        "<p>Resolucion(bit por pixels): "+screen.pixelDepth+ "px. </p>";
+
+        let mensaje2="<h1>VENTANA:</h1>"
+        document.getElementById("contenido2").innerHTML=mensaje2+"<p>Alto exterior: "+window.outerHeight+ "px. </p>"+
+        "<p>Ancho exterior: "+window.outerWidth+ "px. </p>"+
+        "<p>Coordenada X respecto a la pantalla : "+window.screenX+ "px. </p>"+
+        "<p>Coordenada Y respecto a la pantalla: "+window.screenY+ "px. </p>"+
+        "<p>Ha visitado: "+window.length+ " páginas. </p>";
+
+        let mensaje3="<h1>Despedida:</h1>"
+        
+        
+        
+        document.getElementById("contenido3").innerHTML=mensaje3+
+        "<p>      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem magni, enim, cum deleniti laboriosam aliquam quasi molestias debitis illo, porro provident fuga. Dolor recusandae fuga, consectetur </p>";
+
+        //window.location.reload();
+      </script>
+    <br/>
+    <input type="button" value="Actualizar" onclick="location.reload()"/>
+
+    </body>
+</html>

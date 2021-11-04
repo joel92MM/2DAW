@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+      <h1>Actividad 1</h1>
+        <hr/>
+         Calculo de 15 elevado a 6, sin usar el operador aritmetico de elevar a una potencia  
+       <!--  <script>
+            var numero=15;
+            var exponente=1;
+            while(exponente<=6){
+                numero*=15;
+                exponente+=1;
+                alert(numero);
+            }
+        </script>  -->
+         <h1>Actividad 2</h1>
+         <hr/>
+        Usando un bucle, calcula la suma de los 10 primeros números naturales, es decir, 
+            la suma de 1 + 2 + 3 ... + 10, e imprimir el resultado por la consola. Para ello deberás recorrer 
+            el bucle y almacenar el valor acumulado en cada iteración en una variable.  
+        <!--  <script>
+             var numero=1;
+             for (let i=1; i<=10; i++) {
+                 numero=numero+i;
+                 alert(numero); 
+             }
+         </script>  --> 
+        
+        <h1>Actividad 3</h1>
+        <hr/>
+        Anida dos bucles for y muestra por la consola el resultado de los dos índices en 
+        cada iteración. Realiza 10 iteraciones en cada bucle.  
+       <!--  <script>
+            for (let i=0; i<=10; i++) {
+                for (let j=0; j<=i; j++) {
+                    document.write(i+" - "+j+"<br/>");
+                }
+            }
+        </script>  -->
+
+        <h1>Actividad 4</h1>
+        <hr/>
+        En este reto deberás mostrar el número posterior a un número introducido por el usuario. 
+        Deberás solicitar al usuario que introduzca 3 números, y para cada uno de ellos imprimir el número posterior. 
+      <!--   <script>
+            let contador=1;
+            let numero=0;
+            numero=parseInt(prompt("Introduzca un numero"));
+            while (contador<=3) {
+                numero=numero+1;
+                alert(numero);
+                contador+=1;
+            }
+        </script>  -->
+        
+        
+         <h1>Actividad 5</h1>
+         <hr/>
+        En este reto deberás sumar números e imprimirlos por la consola. Para ello, deberás solicitar al usuario que 
+         introduzca 2 números e imprimir el resultado por la consola. Este proceso deberás repetirlo 5 veces. 
+       <!--  <script>
+            let contador=1;
+            let numero1=0
+            let numero2=0;
+            let suma=0;
+
+            
+
+             while (contador<=5) {
+                numero1=parseInt(prompt("Introduzca el primer numero"));
+                numero2=parseInt(prompt("Introduzca el segundo numero"));
+
+                 suma= numero1+ numero2;
+                 
+                 alert(suma);
+                contador+=1;   
+             }
+         </script>  -->
+         
+            <h1>Actividad 6</h1>
+            <hr/>
+            En este reto deberás sumar el valor de 5 números naturales. Para ello, deberás solicitar al usuario que introduzca un 
+           número entero, calcular y sumar los 5 números siguientes e imprimir el resultado por la consola, y volver a repetir este 
+           proceso 4 veces más 
+           <!-- <script>
+               let contador=1;
+               let acumulador=0;
+               let suma=0;
+                while (contador<=5) {
+                    let numero1=parseInt(prompt("introduzca un numero entero : "));
+                    suma=suma+numero1;
+                    contador+=1;
+                }
+                alert("El resultado obtenido de la suma de los 5 numeros naturales es: "+ suma);
+            </script>  -->
+            <h1>Actividad 7</h1>
+            <hr/>
+            Hacer un juego para que el usuario averigüe la capital de un país previamente definida. Tiene tres intentos 
+                y debe mostrase en pantalla si ha acertado o no, 
+            incluyendo en este caso el número de intentos que le quedan. 
+           <!--  <script>
+                
+                let intentos=1;
+                let salir=false;
+
+                while (intentos<=3) {
+                    capital=prompt("¿Cúal es la capital de España?");
+                    if(capital=="madrid"){
+                        alert("Has acertado");
+                        salir==true;
+                        break;
+                    }else{
+                        alert("No has acertado");   
+                    }
+                    intentos+=1;
+                    alert("Te quedan "+intentos+ " intentos");
+                    
+                }
+            </script> -->
+            <h1>Actividad 8</h1>
+            <hr/>
+            Ahora debes pedir un número al usuario y que diga si es par o impar.
+           <!--  <script>
+                let numero=0;
+                numero=parseInt(prompt("Introduce un numero"))
+                if (numero%2==0) {
+                    alert("El numero es par")
+                } else {
+                    alert("El numero es impar")
+                }
+            </script> -->
+
+            <h1>Actividad 9</h1>
+            <hr/>
+            Pide un mes y un año, y escriba el mes anterior y el mes siguiente. 
+            Ej: Si el usuario introduce el mes 10 y el año 2017, el resultado será mes anterior: 9/2017 y el mes posterior 11/2017.
+           <!--  <script>
+                let anio=0;
+                 anio=parseInt(prompt("Introduzca un año"));
+                 
+                let mes=0;
+
+                var anios= new Date();
+
+
+            </script> -->
+
+            <h1>Actividad 10</h1>
+            <hr/>
+            Pide una letra y detecte si es una vocal.
+          <!--   <script>
+                            let letra=["a","e","i","o","u"];
+                            let detector=prompt("Introduzca una letra");
+                            for (let i = 0; i < detector.length; i++) {
+                                if(detector[i]=='a' || detector[i]=='e' || detector[i]=='i' || detector[i]=='o' || detector[i]=='u'){
+                                    alert("la letra introducida "+detector[i]+" es una vocal");
+                                }else{
+                                    alert("la letra introducida ",detector[i]," no es una vocal");
+ 
+                                }
+                                
+                            }
+
+            </script> -->
+
+
+
+            <h1>Actividad 11</h1>
+            <hr/>
+            En este reto deberás pedir un año y escriba si es bisiesto o no. Sabemos que son bisiestos todos los años múltiplos 
+            de 4, excepto los que sean múltiplos de 100 sin que sean múltiplos de 400.
+      <!--       <script>
+                let anio=parseInt(prompt("Introduzca un año"));
+                if((anio%100!=0 && anio%4==0) || (anio%400==0)){
+                    alert("Es bisiesto");
+                }else{
+                    alert("No es bisiesto"); 
+                }
+
+            </script> -->
+            
+
+        
+
+
+        
+    </body>
+</html>

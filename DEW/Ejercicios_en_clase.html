@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <script>
+      console.log(2>3+2);
+      console.log(1 + false + 3.5);
+      console.log(4*true+2);
+      console.log(5/0);
+      console.log(10>2>0);
+      console.log(15<3*10);
+      console.log(3*"hola"+2);
+      console.log(5/ "hola");
+      console.log(Math.PI*32); 
+
+    </script>
+    <hr/>
+    <h1>Ejercicio 2</h1>
+    <script>
+        var nota = prompt("Introduce una nota");
+
+        if(nota>=0 && nota<5){
+            alert("Suspenso");
+        }else if (nota>=5 && nota<7){
+            alert("Aprobado");
+        }else if(nota>=7 && nota<9){
+            alert("Notable");
+        }else if(nota>=9 && nota<=10){
+            alert("Sobresaliente");
+        }else if(nota<0 && nota>10){
+            alert("Error, el rango es de 0- 10")
+        }else{
+            alert("Error, debe ser un numero real comprendido en tre 0-10")
+        }
+    </script>
+     <hr/>
+    <h1>Ejercicio 3 </h1>
+    
+    // Que generaran los siguientes codigos
+    <script>
+        parseInt("15");
+        //Daria un resultado nan
+        parseInt("15.5");
+        //Daria un resultado NAM
+        parseInt(15.5);
+        //transforma al proximo numero entero en este caso seria 16
+        parseInt("true");
+        parseInt(true);
+    </script>
+
+
+</body>
+</html>

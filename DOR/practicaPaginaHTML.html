@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         header{
+             margin: 0;
+             display: flex;
+         }
+        header img{
+            width: 300px;
+        }
+        nav{
+            text-align: center;
+        }
+
+        nav ul{
+            display: flex;            
+            margin:0;
+            list-style: none;
+        }
+        
+        nav ul li{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        header nav ul {
+        	list-style-type: none;
+        	padding: 0;
+            margin-top: 20%;
+        }
+        header  li a{
+            text-decoration: none;
+        }
+
+        header nav ul li {
+        	font-size: 30px;
+        	font-family: Times News Roman;
+        	background-color: white;
+        	border: 2px solid black;
+        	letter-spacing: 0.1em;
+        	width: 200px;
+        	height: 1.5em;
+        	line-height: 1.5em;
+        	position: relative;
+        	overflow: hidden;
+        	margin: 0.5em;
+        	cursor: pointer;
+        }
+
+        #enlacesCasasFotos{
+            display: flex;
+            width: 100%;
+            text-align: center;
+        }
+        #sliderNaturaleza{
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #sliderNaturaleza ul{
+            padding: 0;
+            display: flex;
+            width: 400%;
+
+            animation: cambio 10s infinite alternate;
+        }
+
+        #sliderNaturaleza  li{
+            width: 100%;
+            list-style: none;
+            margin: 10px;
+        }
+        #sliderNaturaleza img{
+            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.7));
+            width: 100%;
+            height: 400px;
+        }
+
+        #sliderPlaya{
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #sliderPlaya ul{
+            padding: 0;
+            display: flex;
+            width: 400%;
+
+            animation: cambios 10s infinite alternate;
+        }
+
+        #sliderPlaya li{
+            width: 100%;
+            list-style: none;
+            margin:10px;
+        }
+        #sliderPlaya img{
+            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.7));
+            width: 100%;
+            height: 400px;
+        }
+
+        @keyframes cambio{
+            0%{margin-left: 0;}
+            20%{margin-left: 0;}
+
+            25%{margin-left: -100%;}
+            45%{margin-left: -100%;}
+
+            50%{margin-left: -200%;}
+            70%{margin-left: -200%;}
+
+            75%{margin-left: -300%;}
+            100%{margin-left: -300%;}
+
+        }
+
+        @keyframes cambios{
+            0%{margin-left: 0;}
+            20%{margin-left: 0;}
+
+            25%{margin-left: -100%;}
+            45%{margin-left: -100%;}
+
+            50%{margin-left: -200%;}
+            70%{margin-left: -200%;}
+
+            75%{margin-left: -300%;}
+            100%{margin-left: -300%;}
+
+        }
+        #idBienvenido{
+            display:flex;
+            width: 100%;
+        }
+        #idBienvenido p{
+            text-align: justify;
+            width: 60%;
+        }
+        #idBienvenido img{
+            margin-left: 20px;
+            width: 40%;
+            height: 300px;
+        }
+        #idBienvenido .parrafos p{
+            width: 100%;
+        }
+        aside p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+            letter-spacing: 0.3em;
+            color: rgb(255, 94, 0);
+        }
+        aside p a{
+            text-decoration: none;
+            color: rgb(255, 94, 0);
+
+        }
+
+
+        footer{
+            display: flex;
+            width: 100%;
+        }
+        footer .logoT{
+            width: 33%;
+        }
+        footer .mapaWeb{
+            display: inline-block;
+            width: 33%;
+        }
+        .mapaWeb ul li a{
+            text-decoration: none;
+        }
+        footer .mapaWeb{
+            width: 33%;
+        }
+        footer .redesSociales{
+            width: 33%;
+        }
+        footer .redesSociales img {
+            width: 50px;
+        }
+        body{
+            background-image: url("Media/fondoPapel.jpeg");
+        }
+
+        .ejemplosDisplay{
+            text-align: center;
+            outline: solid 5px ;
+            transition: outline 0.6s linear;
+            
+        }
+        .ejemplosDisplay:hover{
+            outline-width: 10px;
+        }
+        .ejemplosDisplay a{
+            font-size: 40px;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Media/logoVacacionales.jpeg" alt="logoFantasma">
+        <nav>
+            <ul>
+                <li><a href="practicaPaginaHTML.html"> Inicio</a></li>
+                <li><a href="alojamientos.html">Alojamientos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>  
+    </header>
+  <hr/>
+    <main>
+        <div id="idEnca">
+            <h1>Bienvenido a la web de casas vacacionales de canarias</h1>
+            <div id="idBienvenido">
+                <div class="parrafos">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+                    it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
+                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more 
+                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+                        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
+                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more 
+                        recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <img src="Media/textoBienvenidoTeide.jpeg" atl="Imagen bienvenido">
+            </div>
+        </div>
+        <div id="imgInicio">
+            <img src="" alt="">
+        </div>
+        <hr/>
+        <div id="enlacesCasas">
+            <h2>Vive donde quieras </h2>
+            <div id="enlacesCasasFotos">
+                <div id="sliderNaturaleza">
+                    <ul>
+                    <li>
+                        <img src="Media/casaRural.jpeg" alt="Imagen de las naturalezas">
+                        <p>Casa en la naturaleza </p>
+                    </li>
+                    <li>
+                        <img src="Media/CasaRural2.jpeg" alt="Imagen de las naturalezas2">
+                        <p>Casa en la naturaleza </p>
+                    </li>
+                    <li>
+                        <img src="Media/CasaRural3.jpeg" alt="Imagen de las naturalezas3">
+                        <p>Casa en la naturaleza </p>
+                    </li>
+                    <li>
+                        <img src="Media/CasaRura4.jpeg" alt="Imagen de las naturalezas4">
+                        <p>Casa en la naturaleza </p>       
+                    </li> 
+                    </ul>
+                </div>
+                <div id="sliderPlaya">
+                    <ul>
+                        <li>
+                            <img src="Media/casaPlaya.jpeg" alt="Imagen de las playas">
+                            <p>Casa en la playa </p>
+                        </li>
+                        <li>
+                            <img src="Media/casaPlaya2.jpeg" alt="Imagen de las playas2">
+                            <p>Casa en la playa </p>
+                        </li>
+                        <li>
+                            <img src="Media/casaPlaya3.jpeg" alt="Imagen de las playas3">
+                            <p>Casa en la playa </p>
+                        </li>
+                        <li>
+                            <img src="Media/casaPlaya4.jpeg" alt="Imagen de las playas4">
+                            <p>Casa en la playa </p>
+                        </li>
+                    </ul>    
+                </div>
+            </div>
+        </div>
+        <aside class="informacionAloja">
+            <div>
+                <p>Informate de nuestros alojamientos <a href="alojamientos.html"> aqu&iacute;</a>
+            </div>
+
+            <div class="ejemplosDisplay">
+                <h1><a href="flex.html" >Ejemplos con display</a></h1>
+
+
+            </div>
+
+        </aside>
+    </main>
+    <hr/>
+    <footer>
+        <div class="logoT">
+            <img src="Media/logoVacacionales.jpeg" alt="logoFooter">
+        </div>
+        <div class="mapaWeb">
+            <p>Mapa Web</p>
+            <ul>
+                <li><a href="practicaPaginaHTML.html"> Inicio</a></li>
+                <li><a href="alojamientos.html">Alojamientos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="redesSociales">
+            <p>Nuestras redes Sociales</p>
+            <img src="Media/facebook.png" alt="Facebok Icono">
+            <img src="Media/instagram.jpeg" alt="Instagram Icono">
+        </div>
+    </footer>
+    
+</body>
+</html>

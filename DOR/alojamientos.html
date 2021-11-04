@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         header{
+             margin: 0;
+             display: flex;
+         }
+        header img{
+            width: 300px;
+        }
+     
+
+        header nav ul {
+        	list-style-type: none;
+        	padding: 0;
+            margin-top: 20%;
+            display: flex;
+            text-align: center;
+        }
+        header  li a{
+            text-decoration: none;
+        }
+
+        header nav ul li {
+        	font-size: 30px;
+        	font-family: Times New Roman;
+        	background-color: white;
+        	border: 2px solid black;
+        	letter-spacing: 0.1em;
+        	width: 200px;
+        	height: 1.5em;
+        	line-height: 1.5em;
+        	position: relative;
+        	overflow: hidden;
+        	margin: 0.5em;
+        	cursor: pointer;
+        }
+        .contenedorInfoNa{
+            display: flex;
+            width: 100%;
+        }
+        .contenedorInfoNa .descrip{
+            width: 50%;
+            margin: 10px;
+            text-align: justify;
+        }
+        #sliderNaturaleza{
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #sliderNaturaleza ul{
+            padding: 0;
+            display: flex;
+            width: 400%;
+
+            animation: cambio 10s infinite alternate;
+        }
+
+        #sliderNaturaleza  li{
+            width: 100%;
+            list-style: none;
+            margin: 10px;
+        }
+        #sliderNaturaleza img{
+            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.7));
+            width: 100%;
+            height: 300px;
+        }
+        
+
+
+        @keyframes cambio{
+            0%{margin-left: 0;}
+            20%{margin-left: 0;}
+
+            25%{margin-left: -100%;}
+            45%{margin-left: -100%;}
+
+            50%{margin-left: -200%;}
+            70%{margin-left: -200%;}
+
+            75%{margin-left: -300%;}
+            100%{margin-left: -300%;}
+
+        }
+        @keyframes cambios{
+            0%{margin-left: 0;}
+            20%{margin-left: 0;}
+
+            25%{margin-left: -100%;}
+            45%{margin-left: -100%;}
+
+            50%{margin-left: -200%;}
+            70%{margin-left: -200%;}
+
+            75%{margin-left: -300%;}
+            100%{margin-left: -300%;}
+
+        }
+       #enlacesCasas .primero{
+        background-color: brown;
+        width: 30%;
+        color: white;
+        margin-left: 10px;
+       }
+
+       #enlacesCasas .segundo{
+        background-color:#87CEEB;
+        width: 30%;
+        color: white;
+        margin-left: 10px;
+       }
+       .contenedorInfoPla{
+           display: flex;
+           width: 100%;
+       }
+       .contenedorInfoPla .infoContent{
+            width: 50%;
+            margin: 10px;
+            text-align: justify;
+        }
+        #sliderPlaya{
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #sliderPlaya ul{
+            padding: 0;
+            display: flex;
+            width: 400%;
+
+            animation: cambios 10s infinite alternate;
+        }
+
+        #sliderPlaya  li{
+            width: 100%;
+            list-style: none;
+            margin: 10px;
+        }
+        #sliderPlaya img{
+            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.7));
+            width: 100%;
+            height: 300px;
+        }
+
+
+        footer{
+            display: flex;
+            width: 100%;
+        }
+        footer .logoT{
+            width: 33%;
+        }
+        footer .mapaWeb{
+            display: inline-block;
+            width: 33%;
+        }
+        .mapaWeb ul li a{
+            text-decoration: none;
+        }
+        footer .mapaWeb{
+            width: 33%;
+        }
+        footer .redesSociales{
+            width: 33%;
+        }
+        footer .redesSociales img {
+            width: 50px;
+        }
+        body{
+            background-image: url("Media/fondoPapel.jpeg");
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Media/logoVacacionales.jpeg" alt="logoFantasma">
+        <nav>
+            <ul>
+                <li><a href="practicaPaginaHTML.html"> Inicio</a></li>
+                <li><a href="alojamientos.html">Alojamientos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>  
+    </header>
+    
+    <main>
+        <div id="imgInicio">
+            <img src="" alt="">
+        </div>
+        <hr/>
+        <div id="enlacesCasas">
+            <h1 class="primero">Casas en la naturaleza</h1>
+            <div id="enlacesCasasFotos">
+                <div class="contenedorInfoNa">
+                    <div id="sliderNaturaleza">
+                        <ul>
+                        <li>
+                            <img src="Media/casaRural.jpeg" alt="Imagen de las naturalezas">
+                        </li>
+                        <li>
+                            <img src="Media/CasaRural2.jpeg" alt="Imagen de las naturalezas2">
+                        </li>
+                        <li>
+                            <img src="Media/CasaRural3.jpeg" alt="Imagen de las naturalezas3">
+                        </li>
+                        <li>
+                            <img src="Media/CasaRura4.jpeg" alt="Imagen de las naturalezas4">       
+                        </li> 
+                        </ul>
+                    </div>
+                    <div class="descrip">
+                            <p><strong>Descripcion:</strong>Descripcion: Nuestras casas rurales son viviendas independientes, alejadas de la ciudad están en un 
+                            ambiente de mucha humedad, con mucha vegetacion asi como 
+                            flora autoctona, estan preparadas para resistir la humedad. 
+                            Tiene una arquitectura tradicional con fachadas de piedra y están caracterizadas por su sencillez.
+                            </p>
+                            <p>
+                            <strong>Ubicación:</strong>  Zona norte de tenerife.
+                            <br/>
+                            <strong>Clima:</strong> Clima calido, con mucha humedad, temperaturas entre 18º - 21º.
+                            </p>
+                            
+                            
+                    </div>
+                </div>
+                <hr/>
+                <h1 class="segundo">Casas al lado de la playa</h1>
+                <div class="contenedorInfoPla">
+                    <div class="infoContent">
+                        <p><strong>Descripcion:</strong>Descripcion: Nuestras casas rurales son viviendas independientes, alejadas de la ciudad están en un 
+                            ambiente de mucha humedad, con mucha vegetacion asi como 
+                            flora autoctona, estan preparadas para resistir la humedad. 
+                            Tiene una arquitectura tradicional con fachadas de piedra y están caracterizadas por su sencillez.
+                            </p>
+                            <p>
+                            <strong>Ubicación:</strong>  Zona norte de tenerife.
+                            <br/>
+                            <strong>Clima:</strong> Clima calido, con mucha humedad, temperaturas entre 18º - 21º.
+                            </p>
+                    </div>
+                    <div id="sliderPlaya">
+                        <ul>
+                            <li>
+                                <img src="Media/casaPlaya.jpeg" alt="Imagen de las playas">
+                            </li>
+                            <li>
+                                <img src="Media/casaPlaya2.jpeg" alt="Imagen de las playas2">
+                            </li>
+                            <li>
+                                <img src="Media/casaPlaya3.jpeg" alt="Imagen de las playas3">
+                            </li>
+                            <li>
+                                <img src="Media/casaPlaya4.jpeg" alt="Imagen de las playas4">
+                            </li>
+                        </ul>
+                         
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+     
+    </main>
+    <hr/>
+    <footer>
+        <div class="logoT">
+            <img src="Media/logoVacacionales.jpeg" alt="logoFooter">
+        </div>
+        <div class="mapaWeb">
+            <p>Mapa Web</p>
+            <ul>
+                <li><a href="practicaPaginaHTML.html"> Inicio</a></li>
+                <li><a href="alojamientos.html">Alojamientos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="redesSociales">
+            <p>Nuestras redes Sociales</p>
+            <img src="Media/facebook.png" alt="Facebok Icono">
+            <img src="Media/instagram.jpeg" alt="Instagram Icono">
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display</title>
+        <style>
+
+            .content-First{
+                width: 100%;
+                height: 600px;
+                background-color: silver;
+            }
+            .content-Second{
+                display: inline-flex;
+                width: 100%;
+                height: 30%;
+                border: solid;
+            }
+            .content-Second div{
+                border: solid;
+                width: 23%;
+            }
+            .content-Second div img{
+                width: 100%;
+                height: 100%;
+            }
+           
+            .content-child{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 30%;
+                border: solid;
+            }
+            .content-child div{
+                border: solid;
+                width: 23%;
+                height: 33%;
+            }
+            .content-child div img{
+                width: 100%;
+                height: 100%;
+            }
+
+            .content-child2{
+                display: flex;
+                flex-wrap:nowrap;
+                width: 100%;
+                height: 30%;
+                border: solid;
+            }
+           
+           .content-child2 div{
+               border: solid;
+               width: 23%;
+               height: 100%;
+           }
+
+           .content-child2 div img{
+                width: 100%;
+                height: 100%;
+            }
+            .content-gall{
+                width: 100%;
+                height: 800px;
+                border: solid;
+                background-color: darkseagreen;
+                background-image: url(./Media/fondo-tierra.jpeg);
+                background-repeat: no-repeat;
+            }
+            .caja{
+                display: flex;
+                justify-content:space-between ;
+                width: 100%;
+                height: 33%;
+            }
+            .caja div{
+                border: solid;
+                height: 50%;
+                width: 20%;
+                box-shadow: 0 0 20px #4f9;
+            }
+            .caja div img{
+                width: 100%;
+                height: 100%;
+            }
+            .caja2{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                height: 33%;
+            }
+            .caja2 div{
+                border: solid;
+                height: 50%;
+                width: 20%;
+                box-shadow: 0 0 20px #4f9;
+
+            }
+            .caja2 div img{
+                width: 100%;
+                height: 100%;
+            }
+            .caja3{
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+                height: 33%;
+            }
+            .caja3 div{
+                border: solid;
+                height: 50%;
+                width: 20%;
+                box-shadow: 0 0 20px #4f9;;
+
+            }
+            .caja3 div img{
+                width: 100%;
+                height: 100%;
+            }
+
+            .content-gall2{
+                width: 100%;
+                height: 300px;
+                border: solid;
+            }
+
+            .caja4{
+                margin: 10px ;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                width: 100%;
+                height: 70%;
+            }
+            .caja4 div{
+                border: solid;
+                height: 100%;
+                width: 20%;
+                box-shadow: 0 0 20px #4f9;;
+
+            }
+            .caja4 div img{
+                width: 100%;
+                height: 100%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Ejemplos con display</h1>
+        <hr/>
+        <br/>
+        <div class="content-First">
+            <div class="content-Second">
+                <div class="uno">
+                    <img src="./Media/tigre.jpeg" alt="animal1">
+                </div>
+                <div class="dos">
+                    <img src="./Media/tigre_.jpeg" alt="animal2">
+                </div>
+                <div class="tres">
+                    <img src="./Media/horizontal4.jpeg" alt="animal3">
+                </div>
+            </div>
+            <div class="content-child">
+                <div class="cuatro">
+                    <img src="./Media/horizontal1.jpeg" alt="horizontal1">
+                </div>
+                <div class="cinco">
+                    <img src="./Media/horizontal2.jpeg" alt="horizontal2">
+                </div>
+                <div class="seis">
+                    <img src="./Media/horizontal3.jpeg" alt="horizontal3">
+                </div>
+            </div>
+            <div class="content-child2">
+                <div class="siete">
+                    <img src="./Media/paisaje1.jpeg" alt="paisaje1">
+                </div>
+                <div class="ocho">
+                    <img src="./Media/paisaje2.jpg" alt="paisaje2">
+                </div>
+                <div class="nueve">
+                    <img src="./Media/paisaje3.jpeg" alt="paisaje2">
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="content-gall">
+            <div class="caja">
+                <div class="primero">
+                    <img src="Media/rally1.jpeg" alt="rally">
+                </div>
+                <div class="segundo">
+                    <img src="Media/rally2.jpeg" alt="rally2">
+                </div>
+                <div class="tercero">
+                    <img src="Media/rally3.jpeg" alt="rally3">
+                </div>
+            </div>
+            <div class="caja2">
+                <div class="cuarto">
+                    <img src="Media/rally4.jpeg" alt="rally4">
+                </div>
+                <div class="quinto">
+                    <img src="Media/rally5.jpeg" alt="rally5">
+                </div>
+                <div class="sexto">
+                    <img src="Media/rally6.jpeg" alt="rally6">
+                </div>
+            </div>
+            <div class="caja3">
+                <div class="septimo">
+                    <img src="Media/rally7.jpeg" alt="rally7">
+                </div>
+                <div class="octavo">
+                    <img src="Media/rally8.jpeg" alt="rally8">
+                </div>
+                <div class="noveno">
+                    <img src="Media/rally9.jpeg" alt="rally9">
+                </div>
+            </div>
+            </div>
+            <br/>
+            <div class="content-gall2">
+            <div class="caja4">
+                <div class="decimo">
+                    <img src="Media/spiderman1.gif" alt="spiderman1">
+                </div>
+                <div class="undecimo">
+                    <img src="Media/spiderman2.gif" alt="spiderman2">
+                </div>
+                <div class="duodecimo">
+                    <img src="Media/spiderman3.gif" alt="spiderman3">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

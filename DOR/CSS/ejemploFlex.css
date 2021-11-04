@@ -1,0 +1,63 @@
+h1 {
+    border: 1px solid black ;
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    width: 100%;
+}
+
+.clasificacion{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+ .clasificacion .grupo1{
+    column-gap: 5px;
+
+}
+.grupo1{
+    border-radius: 25px;
+    width: 33%;
+    height: 300px;
+    margin: 1px;
+    display: flex;
+    background-size: cover;
+    background-position: center ;
+    overflow: hidden;
+    position: relative;
+}
+
+.grupo1 .texto{
+    background-color:b38c7f ;
+    color: white; 
+    text-shadow:black 0.1em 0.2em 0.3em;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+}
+
+
+.banner{
+    width: 30%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.banner img{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    border-radius: 25px;
+    
+    
+
+}
+
+

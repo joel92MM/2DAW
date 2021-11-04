@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <p>Ejercio 1</p>
+      <p>Usando el bucle que prefieras, recorre el siguiente array, ordenándolo alfabéticamente</p>
+      <button  onclick="recorrer()">Mostrar resultados en la consola
+        <script src="js/ejercicio1.js"></script>
+      </button>
+      <br/>
+      <p>Ejercicio 2</p>
+      <p>Crea un objeto o clase Persona, con 6 propiedades como: nombre (string), edad (int), sexo (Boolean). Validar que el nombre sea siempre una cadena y cumpla unos requisitos mínimos y que la edad no sea negativa. Cada vez que seteemos una propiedad, validar los datos entrantes.
+        Mostrar todos sus atributos que sean enteros.</p>
+      <button onclick="crearObjeto()">Mostrar resultados en la consola
+        <script src="js/ejercicio2.js"></script>
+      </button>
+      <br/>
+      <p>Ejercicio 3</p>
+      <p>Crea una clase usuario con propiedades "usuario" y "contraseña". La contraseña debe ser privada.
+        Crea un método privado que permita modificar la contraseña y un método cambiarContraseña()  público que pida la contraseña vieja y la cambie por una nueva usando el anterior.
+        Crea un usuario y comprueba que sólo puedes cambiar la contraseña con el método cambiarContraseña()</p>
+        <button onclick="clases()">Mostrar resultados en la consola
+            <script src="js/ejercicio3.js"></script>
+        </button>
+
+      <p>Ejercicio 5</p>
+      <p>Pinta los nodos pares de la primera lista en rojo. Sin tocar el HTML. Fichero adjunto: 
+          <a href="ejercicio5.html">Ejercicio 5</a>        
+    </p>
+
+
+
+      <p>Extras</p>
+      <p>Crea un bucle que genere 1 número aleatorio entre 0 y 30, y comprueba si existe algún jugador con 
+        dicho número(clave). El bucle no puede finalizar hasta encontrar 4 jugadores y mostrar su nombre(valor) 
+        en pantalla</p>
+        <p>let jugadores = new Map([[0,'Prosper Chigumba'], [5,'Valentine Musarurwa'], [16,'Jorum Muchambo'], 
+          [20,'Cabby Kamhapa'], [29,'Justice Jangano'], [22,'John Takudzwa'], [6,'Hardlife Zvirekwi'], 
+          [23,'Carlton Munzabwa'],]);</p>
+
+          <button onclick="extras()">Mostrar resultados en la consola
+            <script src="js/ejercicioExtra.js"></script>
+        </button>
+
+
+      <script>
+         
+
+/* 
+        //funcion que genera un numero a leatorio entre 0y 30 
+        function aleatorio(){
+            return Math.floor(Math.random(30-0)+0);
+        }
+
+        //
+        function comprobarJugadores(){
+            let numeroClave;
+            let jugadores = new Map([[0,'Prosper Chigumba'], [5,'Valentine Musarurwa'], [16,'Jorum Muchambo'], [20,'Cabby Kamhapa'], [29,'Justice Jangano'], [22,'John Takudzwa'], [6,'Hardlife Zvirekwi'], [23,'Carlton Munzabwa'],]);
+            console.log(jugadores);
+            for (let i = 0; i < jugadores.length; i++) {
+                console.log(jugadores);
+                
+            }
+        }
+        comprobarJugadores(); */
+
+
+       
+
+           /**
+            * Funcion que comprueba si el texto introducido es un string
+            * */
+           function comprobarDatos(inputText){
+               if(typeof inputText === 'string'){
+                   return true;
+               }
+
+           }
+        
+      </script>
+
+</body>
+</html>
