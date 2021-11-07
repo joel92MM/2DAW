@@ -7,28 +7,37 @@
     <title>Formulario Solicitud Viaje en Barco</title>
     <link rel="stylesheet" type="text/css" href="assets/css/estilo.css"/>
     
-<link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/><script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"></script></head>
+    <link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/>
+    <script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script>
+    <script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script>
+    <script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script>
+    <script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"></script>
+    <script type="text/javascript" src="assets/js/expresionRegular.js"></script>
+</head>
 <body>
 
     <div class="checkout">
         <div>
             <p class="title"> Travel request </p>
         </div>
-        <form class="form" autocomplete="off" novalidate>
+        <form action="" id="formulario" class="form" autocomplete="off" >
         <fieldset>
             <label for="in_name">Nombre</label>
-            <input type="num" id="in_name" class="input-form" maxlength="10" />
+            <input type="num" id="in_name" class="input-form" maxlength="10" onload="exprNombre()" required/>
+            <span></span>
         </fieldset>
         <fieldset class="fieldset_surename">
             <label for="in_surname">Apellido</label>
             <input type="num" id="in_surname" class="input-form" maxlength="10" />
+            <span></span>
         </fieldset>
         <fieldset class="fieldset_dni">
             <label for="in_dni">DNI/NIE</label>
-            <input type="num" id="in_name" class="input-form" maxlength="10" />
+            <input type="num" id="in_dni" class="input-form" maxlength="10" />
+            <span></span>
         </fieldset>
         <fieldset class="fieldset_postalcode">
-            <label for="in_postalcode">Codigo Postal</label>
+            <label for="in_postalcode">Cod. Postal</label>
             <div class="select">
             <select id="in_postalcode">
                 <option>Otro</option>
@@ -40,10 +49,75 @@
             </div>
         </fieldset>
         <fieldset>
+            <label for="telFijo"> Teléfono Fijo
+                <input type="text" id="telFijo"  size="7"/>
+                <span></span>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="telMovil">Teléfono Móvil
+                <input type="text" id="telMovil" size="7"/>
+                <span></span>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="in_residente">¿Es Residente?</label>
+            <div class="content-first-radio">
+                    <div>
+                        <table>
+                            <tr>
+                                <td><label for="res-yes">Si</label></td>
+                                <td><input type="radio" id="residente" name="reside">
+                                    <span></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>   
+                    <table>
+                        <tr>
+                            <td><label for="res-no">No</label></td>
+                            <td><input type="radio" id="residente" name="reside">
+                                <span></span>
+                            </td>
+                        </tr>
+                </table>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+                <label for="" id="date">Fecha de Ida</label>
+                    <input type="text" id="fecha"/>
+                    <span></span>
+        </fieldset>
+        <fieldset>
+            <label for="numberPerson">Número de personas</label>
+                <input type="number" id="numeroPersonas"/>
+                <span></span>
+                
+        </fieldset>
+        <fieldset>
+            <label for="campoEmail">Email </label>
+                <input type="text" id="eprEmail">
+                <span></span>
+        </fieldset>
+       <fieldset>
+           <label for="redSociales">Cuenta de Red Social(Twitter o Instagram)</label>
+           <input type="text" id="redSocial" maxlength="10">
+           <span></span>
+        </fieldset>
+        <fieldset>
+            <label for="campoEIp">IP </label>
+                <input type="text" id="eprIp" maxlength="10">
+                <span></span>
+        </fieldset>  
+        <fieldset>
             <label for="btn_submit">Others ...</label>
             <input type="text" id="btn_submit" />
+            <span></span>
         </fieldset>
-        <button class="btn"> submit</button>
+        <button class="btn" type="submit"> submit</button>
+        <span></span>
         </form>
     </div>
 </body>
