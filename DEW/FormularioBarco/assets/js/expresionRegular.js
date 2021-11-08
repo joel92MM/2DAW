@@ -165,3 +165,23 @@ function exprNombre(nombre){
          }
          alert("Red social valido");
       }
+
+
+      ----------------------
+      
+         //Recibe como parametros el patron, y comprueba si el valor esta vacio o nulo
+     function test_patron(patron, valor) {
+      if (valor !== '' && valor !== null) {
+          return patron.test(valor);
+      }
+      return false;
+  }
+
+  // Recibe como parámetros la cadena con el error, el patrón y la cadena a comprobar
+  function ver_error(error, patron, valor) {
+      if (test_patron(patron, valor)) {
+          cajaMensajes.innerHTML = '';
+      } else {
+          cajaMensajes.innerHTML = error;
+      }
+  }
