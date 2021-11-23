@@ -1,0 +1,72 @@
+{
+    "contenedores":[
+            {"tipo":"grandes",
+            "envases":[
+                {"tipo":"grande_ancho",
+                    "liquidos":[
+                        {"tipo":"alimento","text":"agua"},
+                        {"tipo":"alimento","text":"leche"},
+                        {"tipo":"alimento","text":"aceite"},
+                        {"tipo":"alimento","text":"vinagre"}]
+                },
+                {"tipo":"grande_alto",
+                    "liquidos":[
+                        {"tipo":"alimento","text":"agua"},
+                        {"tipo":"alimento","text":"leche"},
+                        {"tipo":"alimento","text":"aceite"},
+                        {"tipo":"alimento","text":"vinagre"}]
+                }
+            ]
+        },
+        {"tipo":"mediano",
+            "envases":[
+                {"tipo":"mediano_ancho",
+                    "liquidos":[
+                        {"tipo":"alimento","text":"agua"},
+                        {"tipo":"alimento","text":"leche"},
+                        {"tipo":"alimento","text":"aceite"},
+                        {"tipo":"alimento","text":"vinagre"}]
+                
+            
+        },
+                {"tipo": "Mediano Alto",
+                    "liquidos": [
+                        { "tipo": "sustancias_corrosivas", "text": "Lejía" },
+                        { "tipo": "sustancias_corrosivas", "text": "Amoniaco" },
+                        { "tipo": "sustancias_corrosivas", "text": "Jabón" },
+                        { "tipo": "sustancias_corrosivas", "text": "Aguarrás" },
+                        { "tipo": "sustancias_corrosivas", "text": "Gasolina" },
+                        { "tipo": "sustancias_corrosivas", "text": "Alcohol" } ]
+        }, 
+                {"tipo": "Pequeño",
+                    "liquidos": [
+                        { "tipo": "sustancias_corrosivas", "text": "Lejía" },
+                        { "tipo": "sustancias_corrosivas", "text": "Amoniaco" },
+                        { "tipo": "sustancias_corrosivas", "text": "Jabón" },
+                        { "tipo": "sustancias_corrosivas", "text": "Aguarrás" },
+                        { "tipo": "sustancias_corrosivas", "text": "Gasolina" },
+                        { "tipo": "sustancias_corrosivas", "text": "Alcohol" }]
+                }
+            ]
+        },{"tipo": "Vertical",
+            "envases": [ 
+                {"tipo": "Grande Alto",
+                    "liquidos": [
+                        { "tipo": "alimento", "text": "Agua" },
+                        { "tipo": "alimento", "text": "Leche" },
+                        { "tipo": "alimento", "text": "Aceite" },
+                        { "tipo": "alimento", "text": "Vinagre" } ]
+                }, 
+                {"tipo": "Mediano Alto",
+                    "liquidos": [
+                        { "tipo": "sustancias_corrosivas", "text": "Lejía" },
+                        { "tipo": "sustancias_corrosivas", "text": "Amoniaco" },
+                        { "tipo": "sustancias_corrosivas", "text": "Jabón" },
+                        { "tipo": "sustancias_corrosivas", "text": "Aguarrás" },
+                        { "tipo": "sustancias_corrosivas", "text": "Gasolina" },
+                        { "tipo": "sustancias_corrosivas", "text": "Alcohol" } ]
+                } 
+            ]
+        }
+    ] 
+}

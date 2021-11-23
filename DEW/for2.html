@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Validación de Javascript</title>
+        <meta name="author" content="Raúl Caro Pastorino" />
+        <style>
+            #correcto img{
+                width: 10px;
+            }
+            #correcto{
+                width: 10px;
+                display: none;
+            }
+            #incorrecto img{
+                width: 10px;
+            }
+            #incorrecto{
+                width: 10px;
+                display: none;
+            }
+        </style>
+        <script src="for2.js"></script>
+    </head>
+    <body>
+        <div>
+            <form>
+                <fieldset>
+                    <legend>Introduce los datos y pulsa Comprobar</legend>
+
+
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" name="nombre" size="40" maxlength="150" placeholder="Escriba su nombre aqui" required/>
+                    <div id="correcto" style="display: none;" ><img src="FormularioBarco/assets/correcto.png"></div>
+                    <div id="incorrecto" style="display: none;" ><img src="FormularioBarco/assets/error.jpeg"></div>
+                    <label for="nombre">Apellidos:</label>
+                    <input id="apellido" type="text" name="nombre" size="40" maxlength="150" placeholder="Escriba su apellido aqui" required/>
+                  
+                </fieldset>
+
+                <button type="button">Comprobar</button>
+            </form>
+        </div>
+
+    </body>
+</html>

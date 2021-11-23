@@ -11,8 +11,8 @@
         .verde{
             background-color: greenyellow;
         }
-        .pink{
-            background-color: hotpink;
+        .violeta{
+            background-color:blueviolet;
         }
         .orange{
             background-color: orange;
@@ -24,56 +24,48 @@
             background-color: red;
         }
         .small{
-            height: small;
+            height: 10px;
         }
         .medium{
             height: medium;
         }
         .big{
-            height: large;
+            height: 30px;
         }
     </style>
     <body>
 
-        <div class="container border">
+        <div class="container">
             <div class="row">
-                <div class="col-12 border verde medium">columna1 </div>
-            </div>
-            <div class="col">
-                <div class="col-12 border verde medium">columna1 </div>
+                <div class="col-12 border verde medium big"> </div>
             </div>
             <div class="row">
-                <div class="col-12 border pink large">columna3</div>
+                <div class="col-2 border rojo medium d-none d-sm-block "></div>
+                <div class="col-12 col-sm-10 border ">     
+                        <div class="row">
+                            <div class="col-12 border violeta big"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 border orange big"></div>
+                            <div class="col-12 col-md-6 border orange big"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-4 col-md-2 border blue big"></div>
+                            <div class="col-6 col-sm-4 col-md-2 border blue big"></div>
+                            <div class="col-6 col-sm-4 col-md-4 border blue big"></div>
+                            <div class="col-6 col-sm-4 col-md-2 border blue big"></div>
+                            <div class="col-6 col-sm-4 col-md-2 border blue big"></div>
+                            <div class="col-6 col-sm-4 col-md-2 border blue big"></div>
+                            <div class="col-6 col-sm-4 col-md-2 border blue big"></div>
+                            <div class="col-6 col-sm-4 col-md-4 border blue big"></div>
+                            <div class="col-6 col-sm-4 col-md-2 border blue big"></div>
+                            <div class="col-6 col-sm-4 col-md-2 border blue big"></div>
+                        </div>  
+                </div>
             </div>
             <div class="row">
-                <div class="col-12 border orange">columna3</div>
+                    <div class="col-12 border verde small"></div>
             </div>
-            <div class="row">
-                <div class="col-12 border orange">columna3</div>
-            </div>
-            <div class="row">
-                <div class="col-6 border blue">columna3</div>
-                <div class="col-6 border blue">columna3</div>
-            </div>
-            <div class="row">
-                <div class="col-6 border blue">columna3</div>
-                <div class="col-6 border blue">columna3</div>
-            </div>
-            <div class="row">
-                <div class="col-6 border blue">columna3</div>
-                <div class="col-6 border blue">columna3</div>
-            </div>
-            <div class="row">
-                <div class="col-6 border blue">columna3</div>
-                <div class="col-6 border blue">columna3</div>
-            </div>
-            <div class="row">
-                <div class="col-6 border blue">columna3</div>
-                <div class="col-6 border blue">columna3</div>
-            </div>
-            <div class="row">
-                <div class="col-12 border verde small">columna1 </div>
-            </div>
-        </div>
+        </div>      
     </body>
 </html>

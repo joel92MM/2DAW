@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+  
+      /* Móvil */
+      @media all and (max-width: 576px) {
+
+          .row{
+            background-color: rgb(216, 159, 84);
+          }
+          .columna3  {
+            background-color: teal;
+            color: white;
+            text-align: center;
+          }
+          
+      }
+
+       /* Móvil */
+       @media all and (min-width: 576px) and (max-width: 1198px){
+        .row{
+              background-color: rgb(118, 240, 173);      
+        }
+        .columna6{
+              background-color: rgb(245, 57, 0);      
+              color: white;
+              text-align: center;
+        }
+      
+       
+    
+      }
+
+       /* Móvil */
+       @media all and (min-width: 1199px){
+        .row{
+              background-color: rgb(128, 62, 62);      
+        }
+        .columna7{
+              background-color: rgb(20, 245, 0);      
+              color: rgb(0, 0, 0);
+              text-align: center;
+        }
+        .columna8  .table th{
+          color: rgb(0, 255, 234);
+        }
+        .columna8  .table td{
+          color: white;
+        }
+        .row label{
+          color: white;
+        }
+      
+      }
+</style>
+  </head>
+  <body>
+    
+
+   <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-4 col-xl-5 columna1 order-xl-2 border">
+<!--                 <img src="Media/casaPlaya2.jpeg" class="img-fluid img-thumbnail" alt="casa playa">-->    
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item ">
+      <img src="Media/casaPlaya3.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item active">
+      <img src="Media/casaPlaya2.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="Media/casaPlaya.jpeg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- ----             -->
+            </div>
+           <div class="col-6 col-md-8 col-xl-7 columna2 order-xl-1 border">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Nunca compartiremos sus correo electrónico con nadie más</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-12 movil border d-sm-none columna3">MOVIL</div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-4 col-xl-5 columna4 border">
+                <figure class="figure">
+                    <img src="Media/tigre_.jpeg" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption">Muestra de una imagen de la cara de un tigre.</figcaption>
+                  </figure>
+
+                  <div class="alert alert-danger  alert-dismissible fade show" role="alert">
+                    <strong>Arggggg!!!!!!!</strong> Cuidado que te come el tigre.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            </div>
+            <div class="col-6 col-md-8 col-xl-7 columna5 border">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Asignatura</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nombre">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea2" placeholder="Texto descriptivo de la asignatura" rows="3"></textarea>
+                  </div>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Curso</option>
+                    <option value="1">Primero</option>
+                    <option value="2">Segundo</option>
+                    <option value="3">Tercero</option>
+                  </select>
+                  <label for="exampleFormControlTextarea3" class="form-label">Asignaturas</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value=""  id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Dor
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value=""  id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      DPL
+                    </label>
+                  </div>
+                  <label class="form-name">Repite</label>
+                  <br/>
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Si
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No
+                    </label>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 tablet border d-none d-md-block d-xl-none columna6">TABLET</div>
+         </div>
+         <div class="row">
+            <div class="col-12 pantalla border d-none d-xl-block columna7">PANTALLA XL</div>
+         </div>
+         <div class="row">
+            <div class="col-6 col-md-4 col-xl-5 columna8  order-xl-2 border">
+              <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+            <div class="col-6 col-md-8 col-xl-7 columna9 order-xl-1 border">
+                <label for="customRange1" class="form-label">Rango de extrés de cara al examen</label>
+                <input type="range" class="form-range" id="customRange1">
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                  </div>
+                  
+            </div>
+        </div>
+   </div>
+  </body>
+</html>

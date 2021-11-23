@@ -1,16 +1,23 @@
+
+  //-----------------------FUNCIONES QUE VALIDAN EXPRESIONES REGULARES-----------------------------------------------//
+
+
 /**
  * Funcion que valida un nombre , recibiendo la variable como parametro
  * @param {*} nombre recibe el nombre para validarlo
  */
-function exprNombre(nombre){
+function exprNombre(nombre,id_campo){
+   
    //Se guarda la expresion regular en una variable
-   var exprNombre=/^[A-Za-z]*/;
+   var exprNombre=/^([\w]+){4,30}([\s]?)([\w]?){4,30}$/;
   
    //Validamos el nombre mediante la expresion regular 
-   if(exprNombre.test(nombre)==false){
-       alert("Nombre incorrecto")
+   if(exprNombre.test(nombre)!=false){
+       document.getElementById(id_campo).style.backgroundColor="red";
+       alert("Nombre correcto")
    }else{
-      alert("Nombre correcto");
+      document.getElementById(id_campo).style.backgroundColor="black";
+      alert("Nombre incorrecto");
    }
 
   }
@@ -22,7 +29,7 @@ function exprNombre(nombre){
    */
    function exprPostal(postal){
       //Se guarda la expresion regular en una variable
-      var exprCodigo=/((\d){5,5})/;
+      var exprCodigo=/^((\d){5,5})$/;
 
    //Validamos el codigo postal mediante la expresion regular 
       if(exprCodigo.test(postal)==false){
@@ -38,7 +45,7 @@ function exprNombre(nombre){
    */
    function exprFecha(fecha){
       //Se guarda la expresion regular en una variable
-      var exprFecha=/(\d){2,2}[/](\d){2,2}[/](\d){4,4}/;
+      var exprFecha=/^(\d){2,2}[/](\d){2,2}[/](\d){4,4}$/;
 
       //Validamos la fecha mediante la expresion regular 
       if(exprFecha.test(fecha)==false){
@@ -55,7 +62,7 @@ function exprNombre(nombre){
   function exprApellido(apellido){
 
    //Se guarda la expresion regular en una variable
-   var exprApellido=/^[A-Za-z]*/;
+   var exprApellido=/^([\w][\s]?){5,30}$/;
    
    //Validamos el apellido mediante la expresion regular 
    if(exprApellido.test(apellido)==false){
@@ -107,7 +114,7 @@ function exprNombre(nombre){
      */
     function movilExpr(movil){
           //Se guarda la expresion regular en una variable
-         var exprMovil=/\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}/;
+         var exprMovil=/^(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}$/;
 
          //Validamos el movil mediante la expresion regular 
          if(exprMovil.test(movil)==false){
@@ -165,23 +172,30 @@ function exprNombre(nombre){
          }
          alert("Red social valido");
       }
-
-
-      ----------------------
       
-         //Recibe como parametros el patron, y comprueba si el valor esta vacio o nulo
-     function test_patron(patron, valor) {
-      if (valor !== '' && valor !== null) {
-          return patron.test(valor);
-      }
-      return false;
-  }
+      /**
+      * Funcion que valida una ipv4, recibiend la variable como parametro
+       * @param {*} ipv4 a validar
+       */
+      function ipv4Expr(ipv4){
+         var exprIpv4=/^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
 
-  // Recibe como parámetros la cadena con el error, el patrón y la cadena a comprobar
-  function ver_error(error, patron, valor) {
-      if (test_patron(patron, valor)) {
-          cajaMensajes.innerHTML = '';
-      } else {
-          cajaMensajes.innerHTML = error;
+         if(exprIpv4.test(ipv4)!=true){
+            alert("Ipv4 incorrecto")
+         }
+         alert("Ipv4 valido");
       }
-  }
+
+       /**
+      * Funcion que valida una ipv6, recibiend la variable como parametro
+       * @param {*} ipv6 a validar
+       */
+      function ipv6Expr(ipv6){
+         var exprIpv6=/((^\s*((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))\s*$)|(^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$))/;
+
+         if(exprIpv6.test(ipv6)!=true){
+            alert("Ipv6 incorrecto")
+         }
+         alert("Ipv6 valido");
+      }
+

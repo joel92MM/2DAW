@@ -8,11 +8,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/estilo.css"/>
     
     <link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/>
-    <script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script>
-    <script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script>
-    <script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script>
-    <script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"></script>
-    <script type="text/javascript" src="assets/js/expresionRegular.js"></script>
 </head>
 <body>
 
@@ -21,46 +16,64 @@
             <p class="title"> Travel request </p>
         </div>
         <form action="" id="formulario" class="form" autocomplete="off" >
-        <fieldset>
+
+            <!-- Grupo nombre -->
+        <fieldset id="grupo_nombre">
             <label for="in_name">Nombre</label>
-            <input type="num" id="in_name" class="input-form" maxlength="10" onload="exprNombre()" required/>
-            <span></span>
+            <div class="formulario__grupo-input">
+                <input type="text"  name="in_name" id="in_name" placeholder="Introduzca su nombre" required>
+            </div>
         </fieldset>
-        <fieldset class="fieldset_surename">
+
+        <!-- Gupo Apellidos -->
+        <fieldset id="grupo_surname">
             <label for="in_surname">Apellido</label>
-            <input type="num" id="in_surname" class="input-form" maxlength="10" />
-            <span></span>
+            <div class="formulario__grupo-input">
+                <input type="text" id="in_surname" name="in_surname"   placeholder="Introduzca sus apellidos" required/>
+            </div>
         </fieldset>
-        <fieldset class="fieldset_dni">
+
+        <!-- Grupo  DNI-->
+        <fieldset id="grupo_dni">
             <label for="in_dni">DNI/NIE</label>
-            <input type="num" id="in_dni" class="input-form" maxlength="10" />
-            <span></span>
+            <div class="formulario__grupo-input">
+                <input type="text" id="in_dni" class="input-form" name="in_dni"  placeholder="Introduzca su dni" required/>
+            </div>
         </fieldset>
-        <fieldset class="fieldset_postalcode">
+
+          <!-- Grupo Codigo Postal-->
+        <fieldset id="grupo_postalcode">
             <label for="in_postalcode">Cod. Postal</label>
             <div class="select">
-            <select id="in_postalcode">
+            <select id="in_postalcode" onchange="crearInput()">
                 <option>Otro</option>
                 <option>38400</option>
                 <option>38311</option>
                 <option>38450</option>
-                
+                <option>Nuevo codigo postal</option>
             </select>
             </div>
         </fieldset>
-        <fieldset>
-            <label for="telFijo"> Teléfono Fijo
-                <input type="text" id="telFijo"  size="7"/>
-                <span></span>
-            </label>
+      
+
+        <!-- Grupo Telefono Fijo-->
+        <fieldset id="grupo_fijo">
+            <label for="fijo"> Teléfono Fijo</label>
+            <div class="formulario__grupo-input">
+                <input type="text" id="fijo"  name="fijo" size="20" placeholder="Introduzca el telefono" required/>
+            </div>
         </fieldset>
-        <fieldset>
-            <label for="telMovil">Teléfono Móvil
-                <input type="text" id="telMovil" size="7"/>
-                <span></span>
-            </label>
+
+        <!-- Grupo Movil-->
+        <fieldset id="grupo_movil">
+            <label for="movil">Teléfono Móvil</label>
+            <div class="formulario__grupo-input">
+                <input type="text" id="movil" name="movil" size="20" placeholder="Introduzca el movil" required/>
+             </div>
         </fieldset>
-        <fieldset>
+
+        <!-- Grupo residente -->
+        <fieldset id="grupo_reside">
             <label for="in_residente">¿Es Residente?</label>
             <div class="content-first-radio">
                     <div>
@@ -85,40 +98,93 @@
                 </div>
             </div>
         </fieldset>
-        <fieldset>
+
+        <!-- Grupo Fecha-->
+        <fieldset id="grupo_fecha">
+            <div class="formulario__grupo-input">
                 <label for="" id="date">Fecha de Ida</label>
-                    <input type="text" id="fecha"/>
-                    <span></span>
-        </fieldset>
-        <fieldset>
+                    <input type="text" id="fecha" name="fecha"/>
+            </div>
+          </fieldset>
+
+        <!-- Grupo Numero de Personas-->
+        <fieldset id="grupo_persons">
             <label for="numberPerson">Número de personas</label>
                 <input type="number" id="numeroPersonas"/>
-                <span></span>
-                
         </fieldset>
-        <fieldset>
+
+        <!-- Grupo Opcion vehiculo -->
+
+        <fieldset id="grupo_vehiculo" onblur="crearInput()">
+            <label for="vehiculo">Opcion Vehiculo</label>
+            <div class="select">
+            <select id="vehiculo">
+                <option value="" disabled selected></option>
+                <option>Si</option>
+                <option>No</option>
+            </select>
+            </div>
+        </fieldset>       
+
+        <!-- Grupo Email-->
+        <fieldset id="grupo_email">
             <label for="campoEmail">Email </label>
-                <input type="text" id="eprEmail">
-                <span></span>
+            <div class="formulario__grupo-input">
+                <input type="email" class="formulario__input" name="email" id="email" placeholder="Introduzca su email"/>
+            </div>
         </fieldset>
-       <fieldset>
-           <label for="redSociales">Cuenta de Red Social(Twitter o Instagram)</label>
-           <input type="text" id="redSocial" maxlength="10">
-           <span></span>
+
+        
+
+        <!-- Grupo Redes Sociales-->
+       <fieldset id="grupo_social">
+           <label for="redSociales">Cuenta Twitter</label>
+           <input type="text" id="twitter" name="twitter" maxlength="10" placeholder="twitter">
         </fieldset>
-        <fieldset>
+
+        <fieldset id="grupo_social">
+            <label for="redSociales">Cuenta de Instagram</label>
+            <input type="text" id="instagram" name="instagram" maxlength="10" placeholder="Instagram">
+         </fieldset>
+
+      <!-- Grupo -->
+        <fieldset id="grupo_ip">
             <label for="campoEIp">IP </label>
-                <input type="text" id="eprIp" maxlength="10">
-                <span></span>
-        </fieldset>  
-        <fieldset>
-            <label for="btn_submit">Others ...</label>
-            <input type="text" id="btn_submit" />
-            <span></span>
+                <input type="text" id="eprIp" name="eprIp"/>
+        </fieldset> 
+
+          <!-- nuevo elemento -->
+          <fieldset>
+            <div id="input">
+            </div>
         </fieldset>
+        <!-- Grupo --> 
+        <fieldset id="grupo_others">
+            <label for="btn_submit">Motivo del viaje</label>
+            <input type="text" id="btn_submit"  style="color: black;" size="100" onblur="eliminaEspacios()"/>
+            
+        </fieldset>
+
+
         <button class="btn" type="submit"> submit</button>
-        <span></span>
+      
         </form>
+        <div id="mensajeError">
+            <p class="nombre_error">Nombre Incorrecto (Mínimo 1 nombre,  Máximo 2 nombres )</p>
+            <p class="apellido_error">Apellido Incorrecto (Mínimo 1 apellido, Máximo  2 apellidos)</p>
+            <p class="dni_error">DNI Incorrecto (Tiene que tener 8 digitos, y una letra)</p>
+            <p class="fijo_error">El telefono solo puede contener numeros y el maximo son 9 dígitos.</p>
+            <p class="movil_error">El movil, puede comenzar con  los prefijos (+34|0034|34), y solo puede contener numeros y el maximo son 8 dígitos.</p>
+            <p class="fecha_error">La fecha tiene que ser en formato "XX/XX/XXXX".</p>
+            <p class="email_error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+            <p class="ipv4_error">Error al introducir IPV4 o IPV6 </p>
+            <p class="twitter_error">Error  el nombre de usuario  de twitter empieza por @ y puede contener letras mayúsculas y minúsculas, números, guiones y guiones bajos..</p>
+            <p class="instagram_error">Error  el nombre de usuario de instagram empieza por @ y puede contener letras mayúsculas y minúsculas, números, guiones y guiones bajos..</p>
+
+        </div>
+
     </div>
+    <script src="assets/js/formulario.js"></script>
+  
 </body>
 </html>

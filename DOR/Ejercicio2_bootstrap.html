@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+        .verde{
+            background-color: springgreen;
+        }
+        .violeta{
+            background-color: slateblue;
+        }
+        .azul{
+            background-color: aqua;
+        }
+        .gris{
+            background-color: lightslategray;
+        }
+        .naranja{
+            background-color: sandybrown;
+        }
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container border">
+        
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12  border verde ">Header </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-3 offset-md-3  border violeta">1</div>
+            <div class="col-6 col-sm-3  border violeta">2</div>
+            <div class="w-100 d-none d-md-block "></div> 
+            <div class="col-6 col-sm-3  border violeta">3</div>
+            <div class="col-6 col-sm-3 offset-md-6 border violeta">4</div>
+        </div>
+        <div class="row">
+            <div class="col-12 border azul d-none d-sm-block d-md-none">tablet </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-3 col-md-3 order-md-4 border gris">a</div>
+            <div class="col-6 col-sm-3 col-md-3 order-md-3 border gris">b</div>
+            <div class="col-6 -3 col-sm-3 col-md-3 order-md-2 border gris">c</div>
+            <div class="col-6 col-sm-3 col-md-3  border gris">d</div>
+        </div>
+        <div class="row">
+            <div class=" col-sm-12   border azul d-block d-sm-none ">mobile </div>
+        </div>
+      
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12  border azul  d-none  d-md-block">desktop </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6  col-md-3   order-md-2 border naranja">:D </div>
+            <div class="col-sm-6 col-md-3 offset-md-3  border naranja order-md-1 d-none d-sm-block">:( </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12 col-xl-12  border verde  d-none d-sm-block">footer </div>
+        </div>
+</div>
+</body>
+</html>
