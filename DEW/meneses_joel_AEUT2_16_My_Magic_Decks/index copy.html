@@ -46,7 +46,7 @@
 
       </nav>
       <div class="row">
-        <div class="col-8">
+        <div class="col-9 col-lg-9 col-xl-9">
       
              <h4>Cards</h4>
       
@@ -55,8 +55,8 @@
               <div class="card" style="width: 18rem;">
                 <img src="https://c1.scryfall.com/file/scryfall-cards/small/front/8/c/8cec48b8-58b2-4894-96e4-8477b83d4cf6.jpg?1562634341" class="card-img-top" alt="...">
                 <div class="card-body justify-content-center">
-                  <h4 class="card-name">Ugin, the Spirit Dragon</h4>
-                  <h5 class="card-title">Precio</h5>
+                  <h5 class="card-name">Ugin, the Spirit Dragon</h5>
+                  <h6 class="card-title">Precio</h6>
                   <p class="card-text">98.99€</p>
                   <a href="#" class="btn btn-primary">Comprar</a>
                 </div>
@@ -81,9 +81,10 @@
                 </div>
               </div>
              </div>
+             <button id="cargando">Probar</button>
         </div>
     
-        <div class="col-4">
+        <div class="col-3">
             <h4>Seleccionadas</h4>
             <table class="table-responsive">
                 <thead>
@@ -130,6 +131,43 @@
     </template>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <script src="myjs.js"></script>
+    <script>
+     // var llave = document.getElementById("cargando");
+
+      //llave.addEventListener("click",probando());
+
+
+      function probando(){
+        //archivo que vamos a leer
+        
+        fetch("https://api.scryfall.com/cards/search?order=set&q=e%3Augin&unique=prints")
+            .then(respuesta => respuesta.json())//Indicamos el formato en el que se desea obtener la informacion
+            .then(cartas => {
+              cartas.forEach(carta => {
+                //creacion de la etiquetas
+                let div= document.createElement("div");
+                let div_secundario= document.createElement("div");
+                let img= document.createElement("img");
+                let en5= document.createElement("h5");
+                let en6= document.createElement("h6");
+                let parrafo= document.createElement("p");
+                let enlace=document.createElement("a");
+                //creacion de los atributos de la etiqueta
+                div.className="card";
+                div.setAttribute("style","width: 18rem;");
+
+                div_secundario.className="card-body";
+
+                img.setAttribute("src")
+
+
+              });
+            })//Mostramos el contenido
+            document.body.appendChild(div);
+
+      }
+      probando();
+
+    </script>
   </body>
 </html>
