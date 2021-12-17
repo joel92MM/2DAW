@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
       .fondo{
-        background-image: url("media/fondoMadera.jpeg");
+        background-image: url("media/fondoMadera.webp");
         background-repeat: no-repeat;
         background-size: 100%;
       }
@@ -20,9 +20,12 @@
   <body>
     <!--barra de menu-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success fondo">
-      <img src="media/jcinema.png" class="img-fluid" alt="logo" width="100px" height="54px">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">NortFilms Studio</a>
+      <img src="media/jcinema.png" class="img-fluid  d-none d-lg-flex" alt="logo" width="100px" height="54px">
+
+      <a class="navbar-brand " href="#">
+        <img src="media/jcinema.png" class="img-fluid  d-lg-none" alt="logo" width="100px" height="54px">
+        NortFilms Studio</a>
+        <div class="container-fluid content">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -89,9 +92,9 @@
         </div>
       </nav>
       <!--Fin menu navegacion-->
+      <!--Carrosel-->
       <div class="row">
-        <div class="col-xl-12 h-100">
-          <!--Carrosel-->
+        <div class="col-12 h-100">
           <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -100,7 +103,7 @@
             </div>
             <div class="carousel-inner" >
               <div class="carousel-item active " data-bs-interval="10000" bg-secondary>
-                <img src="media/filmSpider.png" class="d-block w-100" alt="...">
+                <img src="media/filmSpider.png" class="d-block w-100 img-fluid" alt="...">
               </div>
               <div class="carousel-item" data-bs-interval="2000">
                 <img src="media/filmThor2.png" class="d-block w-100" alt="..." >
@@ -118,145 +121,139 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          <!--Fin Carrosel-->
         </div>
-        <div class="col">
-        <!--Acrdeon-->
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Peliculas destacadas de este mes
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <!--Cartas Peliculas-->
-                <div class="row row-cols-1 row-cols-md-3  g-4">
-                  <div class="col" >
-                    <div class="card h-100">
-                      <img src="media/filmThor.png" class="card-img-top" alt="..."  height="500px">
-                      <div class="card-body">
-                        <h5 class="card-title">Thor Love and Thunder</h5>
-                        <p class="card-text"> Jane Foster se convierte en la Diosa del Trueno y sustituye a Thor ya que esté deja de ser considerado digno de seguir portando el martillo.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="media/filmSpider.jpg" class="card-img-top" alt="..." height="500px">
-                      <div class="card-body">
-                        <h5 class="card-title">Spider-Man: No Way Home</h5>
-                        <p class="card-text">Después de que Mysterio desvelara la identidad de Spider-Man a todo el mundo en Lejos de casa, Peter Parker (Tom Holland), desesperado por volver a la normalidad y recuperar su anterior vida, pide ayuda a Doctor Strange para enmendar tal acción. El Hechicero Supremo de Marvel accede a ayudar al joven Hombre Araña, sin embargo, algo sale mal y el multiverso se convierte en la mayor amenaza hasta el momento.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="media/filmMatrix.jpg" class="card-img-top" alt="..." height="500px">
-                      <div class="card-body">
-                        <h5 class="card-title">Matrix 4 Resurrections</h5>
-                        <p class="card-text">Neo vive una vida normal y corriente en San Francisco mientras su terapeuta le prescribe pastillas azules. Hasta que Morfeo le ofrece la pastilla roja y vuelve a abrir su mente al mundo de Matrix.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="media/filmCazafan.jpeg" class="card-img-top" alt="..." height="500px">
-                      <div class="card-body">
-                        <h5 class="card-title">Cazafantasmas: Más Allá</h5>
-                        <p class="card-text">Cuando una madre soltera y sus dos hijos se mudan a una nueva ciudad, pronto descubren que tienen una conexión con los Cazafantasmas originales y el legado secreto de su abuelo..</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      </div>
+      <!--Fin Carrosel-->
+      <div class="row">
+          <!--Acrodeon-->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Peliculas destacadas de este mes
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
                   <!--Cartas Peliculas-->
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Series destacadas de este mes
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Peliculas o series que puedes comprar
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <!--Comprar-->
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                  <div class="col-2">
-                    <div class="card h-100">
-                      <img src="media/filmIron.jpg" class="card-img-top" alt="..." width="200px" height="200px">
-                      <div class="card-body">
-                        <h5 class="card-title">Iron Man 3</h5>
-                        <p class="card-text">El descarado y brillante Tony Stark, tras ver destruido todo su universo personal, debe encontrar y enfrentarse a un enemigo cuyo poder no conoce límites. Este viaje pondrá a prueba su entereza una y otra vez, y le obligará a confiar en su ingenio.</p>
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-md-3 g-lg-1">
+                    <div class="col" >
+                      <div class="card h-100">
+                        <img src="media/filmThor.png" class="card-img-top" alt="..."  height="500px">
+                        <div class="card-body">
+                          <h5 class="card-title">Thor Love and Thunder</h5>
+                          <p class="card-text"> Jane Foster se convierte en la Diosa del Trueno y sustituye a Thor ya que esté deja de ser considerado digno de seguir portando el martillo.</p>
+                        </div>
                       </div>
-                      <div class="card-footer">
-                        <small class="fw-bolder">Precio: 20€</small>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="media/filmSpider.jpg" class="card-img-top" alt="..." height="500px">
+                        <div class="card-body">
+                          <h5 class="card-title">Spider-Man: No Way Home</h5>
+                          <p class="card-text">Después de que Mysterio desvelara la identidad de Spider-Man a todo el mundo en Lejos de casa, Peter Parker (Tom Holland), desesperado por volver a la normalidad y recuperar su anterior vida, pide ayuda a Doctor Strange para enmendar tal acción. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="media/filmMatrix.jpg" class="card-img-top" alt="..." height="500px">
+                        <div class="card-body">
+                          <h5 class="card-title">Matrix 4 Resurrections</h5>
+                          <p class="card-text">Neo vive una vida normal y corriente en San Francisco mientras su terapeuta le prescribe pastillas azules. Hasta que Morfeo le ofrece la pastilla roja y vuelve a abrir su mente al mundo de Matrix.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="media/filmCazafan.jpeg" class="card-img-top" alt="..." height="500px">
+                        <div class="card-body">
+                          <h5 class="card-title">Cazafantasmas: Más Allá</h5>
+                          <p class="card-text">Cuando una madre soltera y sus dos hijos se mudan a una nueva ciudad, pronto descubren que tienen una conexión con los Cazafantasmas originales y el legado secreto de su abuelo..</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </div>
-                    </div>
-                  </div>
+                    <!--Cartas Peliculas-->
                 </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Series destacadas de este mes
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Peliculas o series que puedes comprar
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
                   <!--Comprar-->
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="media/filmIron.jpg" class="card-img-top" alt="..." width="200px" height="300px">
+                        <div class="card-body">
+                          <h5 class="card-title">Iron Man 3</h5>
+                          <p class="card-text">El descarado y brillante Tony Stark, tras ver destruido todo su universo personal, debe encontrar y enfrentarse a un enemigo cuyo poder no conoce límites. Este viaje pondrá a prueba su entereza una y otra vez, y le obligará a confiar en su ingenio.</p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="fw-bolder text-danger text-center">Precio: 20€</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="media/filmSuper.jpg" class="card-img-top" alt="..."  width="200px" height="300px">
+                        <div class="card-body">
+                          <h5 class="card-title">Supersalidos</h5>
+                          <p class="card-text">Cuento adolescente con moraleja sobre dos inadaptados sociales adolescentes que están a punto de graduarse en el instituto.</p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="fw-bolder text-danger">Precio: 10€</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="media/filmTed.jpg" class="card-img-top" alt="..." width="200px" height="300px">
+                        <div class="card-body">
+                          <h5 class="card-title">Ted</h5>
+                          <p class="card-text"> Cuando John Bennett era pequeño, deseaba que su osito de peluche Ted fuera un oso de verdad y, por desgracia, su sueño se hizo realidad</p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="fw-bolder text-danger">Precio 10€</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!--Comprar-->
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Fin Acrdeon-->
-        </div>
+          <!-- Fin Acrdeon-->
       </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+
+     
        <!--footer-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="nav-link disabled" href="#">Derechos reservados a los cotillas</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#footer" aria-controls="footer" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="footer">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
