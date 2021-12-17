@@ -13,6 +13,14 @@
         background-repeat: no-repeat;
         background-size: 100%;
       }
+      .ancho{
+        width:25%
+      }
+      @media screen and (max-width: 768px) {
+            .boton{
+                display:contents!important;
+            }
+        }
     </style>
     <title>Practica Final</title>
   </head>
@@ -25,7 +33,7 @@
       <a class="navbar-brand " href="#">
         <img src="media/jcinema.png" class="img-fluid  d-lg-none" alt="logo" width="100px" height="54px">
         NortFilms Studio</a>
-        <div class="container-fluid content">
+        <div class="container-fluid boton">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -188,90 +196,153 @@
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <!--Series-->
-                  <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
+                  <div class="row row-cols-1 row-cols-md-3 g-4 w-100">
+                    <div class="col-12 col-md-6 col-lg-3 ">
                       <div class="card h-100">
-                        <img src="media/Netflix.png" class="card-img-top" alt="..." height="500px">
+                        <img src="media/Netflix.png" class="card-img-top" alt="..." height="400px">
                         <div class="card-body">
-                          <h5 class="card-title">Netflix</h5>
+                          <h5 class="card-title text-danger text-center">Netflix</h5>
                         </div>
                         <div class="card-footer">
-                          <small class="text-muted">
-                            <!--Modal Netflix-->
-                            <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                  Ver series disponibles
-                                </button>
-                                <!-- Modal -->
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                  <div class="modal-dialog">
-                                    <div class="modal-content">
-                                      <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Series Netflix</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                      </div>
-                                      <div class="modal-body">
-                                        <!--Series-->
-                                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                                          <div class="col">
-                                            <div class="card">
-                                              <img src="media/papel.jpg" class="card-img-top" alt="..." height="500px">
-                                              <div class="card-body">
-                                                <h5 class="card-title">La Casa de Papel</h5>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col">
-                                            <div class="card">
-                                              <img src="media/desorden.jpg" class="card-img-top" alt="..." height="500px">
-                                              <div class="card-body">
-                                                <h5 class="card-title">El desorden que dejas</h5>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="col">
-                                            <div class="card">
-                                              <img src="media/maldicion.jpg" class="card-img-top" alt="..." height="500px">
-                                              <div class="card-body">
-                                                <h5 class="card-title">La Maldición de hill house</h5>
-                                              </div>
+                          <button class="btn btn-primary text-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Mostrar Series</button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                  <div class="offcanvas-header">
+                                    <h5 id="offcanvasRightLabel">Series</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                  </div>
+                                  <div class="offcanvas-body">
+                                    <!--Modal Netflix-->
+                                      <div class="row row-cols-1  row-cols-md-1 row-cols-lg-3  g-4">
+                                        <div class="col">
+                                          <div class="card">
+                                            <img src="media/papel.jpg" class="card-img-top w-100" alt="..." height="200px">
+                                            <div class="card-body">
+                                              <h5 class="card-title">La Casa de Papel</h5>
                                             </div>
                                           </div>
                                         </div>
-                                        <!--Series-->
+                                        <div class="col">
+                                          <div class="card">
+                                            <img src="media/desorden.jpg" class="card-img-top " alt="..." height="200px">
+                                            <div class="card-body">
+                                              <h5 class="card-title">El desorden que dejas</h5>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col">
+                                          <div class="card">
+                                            <img src="media/maldicion.jpg" class="card-img-top " alt="..." height="200px">
+                                            <div class="card-body">
+                                              <h5 class="card-title">La Maldición de hill house</h5>
+                                            </div>
+                                          </div>
+                                        </div>
                                       </div>
-                                      <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <!--Modal Netflix-->
+                                  </div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <div class="card h-100">
+                        <img src="media/hbo-max.jpg" class="card-img-top" alt="..." height="400px">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">HBO Max</h5>
+                        </div>
+                        <div class="card-footer">
+                          <!--oton-->
+                          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            Mostrar Series
+                          </button>
+                          
+                          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Series</h5>
+                              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                              <!--Modal HBO-->
+                                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3  g-4">
+                                  <div class="col">
+                                    <div class="card">
+                                      <img src="media/Raisedwolves.jpg" class="card-img-top w-100" alt="..." height="200px">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Criado por los lobos</h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="card">
+                                      <img src="media/OUTSIDER.jpg" class="card-img-top " alt="..." height="200px">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Outsider</h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="card">
+                                      <img src="media/LASNUNCA.jpg" class="card-img-top " alt="..." height="200px">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Las Nunca</h5>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                          <!--Modal Netflix-->
-                          </small>
+                              <!--Modal HBO-->
+                            </div>
+                          </div>
+                           <!--boton-->
                         </div>
                       </div>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="media/disney-plus.png" class="card-img-top" alt="..." height="400px">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                          <h5 class="card-title text-center">Disney Plus</h5>
                         </div>
                         <div class="card-footer">
-                          <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        </div>
-                        <div class="card-footer">
-                          <small class="text-muted">Last updated 3 mins ago</small>
+                          <!--modal-->
+                          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Mostrar Series</button>
+
+                          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Series</h5>
+                              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body small">
+                               <!--Modal Disney-->
+                               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-6">
+                                <div class="col">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 class="card-title text-center">The Mandalorian</h5>
+                                    </div>
+                                    <img src="media/mandalori.jpg" class="card-img-top w-100" alt="..." height="200px">
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 class="card-title text-center">Bruja Escarlata y Visión</h5>
+                                    </div>
+                                    <img src="media/escarlata.jpg" class="card-img-top " alt="..." height="200px">
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 class="card-title text-center">Falcon y el soldado de Invierno</h5>
+                                    </div>
+                                    <img src="media/falcon.jpg" class="card-img-top " alt="..." height="200px">
+                                  </div>
+                                </div>
+                              </div>
+                            <!--Modal disney-->
+                            </div>
+                          </div>
+                          <!--disne-->
                         </div>
                       </div>
                     </div>
