@@ -1,19 +1,19 @@
 // Paletas de colores básica
 
 //Colores generales
-$color-background:white; 
-$color-base:black; 
+$color-background: 
+$color-base: 
 
 
 //Colores barra de menú
-$navbar-background-color:rgb(153, 90, 153); 
-$navbar-color-hover:$color-background;
+$navbar-background-color: 
+$navbar-color-hover: $color-background;
 
 //Colores del borde 
-$border-color:$color-base;
+$border-color: $color-base;
 
 /*Estilos para el contenedor general de mi página*/
-$main-container-width:100%;
+$main-container-width: %;
 
 .container {
     width: $main-container-width;
@@ -21,13 +21,12 @@ $main-container-width:100%;
 }
 
 
-
 //Estilos para los bordes
 $border-width:0.1rem;
-$border-style: solid;
+$border-style: 
 
-$border-radius: 1rem;
-$boder-radius-big: 2rem;
+$border-radius: rem;
+$boder-radius-big: rem;
 
 
 /*Usando anidamiento crear la hoja de estilos para un menú */
@@ -37,13 +36,13 @@ nav {
 
     ul {
         li {
-            display: inline-block;
+            display: 
             padding-left: 1rem;
-            padding-right: 1rem;
+            padding-right: rem;
 
             &.active {
                 color: $navbar-color-hover;
-                font-weight:bold;
+                font-weight:
             }
 
             &:hover {
@@ -52,7 +51,7 @@ nav {
 
 
             a {
-                text-decoration:none; 
+                text-decoration: 
             }
 
         }
@@ -60,28 +59,24 @@ nav {
 }
 
 /*Estructura de anidamiento para la figura (cards)*/
-$figure-width: 50%;
-
-.figures{
-    display: inline-flex;
-}
+$figure-width: %;
 
 figure.card {
     border: $border-width #{$border-style} $border-color;
     border-radius: $border-radius;
-    display:block;
+    display:
     padding: 1rem;
     
     width: $figure-width;
      img {
-        border-radius: 15px; 
+        border-radius: ; 
         width: 100%;
      }
 
      figcaption {
          font-size: 0.8rem;
          margin: 0.5rem;
-         text-align:center; 
+         text-align: 
      }
 
 }
