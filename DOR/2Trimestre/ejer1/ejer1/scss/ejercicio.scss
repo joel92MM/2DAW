@@ -1,19 +1,21 @@
 // Paletas de colores básica
 
 //Colores generales
-$color-background: 
-$color-base: 
+$color-background:white; 
+$color-base:black; 
 
 
 //Colores barra de menú
-$navbar-background-color: 
-$navbar-color-hover: $color-background;
+$navbar-background-color:violet; 
+$navbar-color-hover:white;
+$color-background:black;
 
 //Colores del borde 
-$border-color: $color-base;
+$border-color:
+ $color-base;
 
 /*Estilos para el contenedor general de mi página*/
-$main-container-width: %;
+$main-container-width:100%;
 
 .container {
     width: $main-container-width;
@@ -23,9 +25,9 @@ $main-container-width: %;
 
 //Estilos para los bordes
 $border-width:0.1rem;
-$border-style: 
+$border-style: solid;
 
-$border-radius: rem;
+$border-radius: 2rem;
 $boder-radius-big: rem;
 
 
@@ -36,13 +38,13 @@ nav {
 
     ul {
         li {
-            display: 
+            display: inline-block;
             padding-left: 1rem;
-            padding-right: rem;
+            padding-right: 1rem;
 
             &.active {
                 color: $navbar-color-hover;
-                font-weight:
+                font-weight:bold;
             }
 
             &:hover {
