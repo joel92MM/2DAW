@@ -13,7 +13,7 @@ $navbar-color-hover:$color-background;
 $border-color:$color-base;
 
 /*Estilos para el contenedor general de mi página*/
-$main-container-width:100%;
+$main-container-width:75%;
 
 .container {
     width: $main-container-width;
@@ -37,7 +37,7 @@ nav {
 
     ul {
         li {
-            display: inline-block;
+            display: inline-flex;
             padding-left: 1rem;
             padding-right: 1rem;
 
@@ -60,16 +60,14 @@ nav {
 }
 
 /*Estructura de anidamiento para la figura (cards)*/
-$figure-width: 50%;
+$figure-width: 30%;
 
-.figures{
-    display: inline-flex;
-}
+
 
 figure.card {
     border: $border-width #{$border-style} $border-color;
     border-radius: $border-radius;
-    display:block;
+    display:inline-block;
     padding: 1rem;
     
     width: $figure-width;
