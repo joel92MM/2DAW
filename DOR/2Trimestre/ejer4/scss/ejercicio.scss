@@ -1,0 +1,27 @@
+
+//colores articulos
+$bgcolor-articulos:lightblue;
+$color-articuloshover: yellow;
+$mar:5px;
+$pad:5px;
+
+//section
+$bgcolor-section:blue;
+$padi:10px;
+
+
+section{
+    background-color: $bgcolor-section;
+    padding: $padi;
+
+    article{
+        background-color: $bgcolor-articulos;
+        margin: $mar;
+        padding: $pad;
+        
+        &:hover{
+            background-color: $color-articuloshover;
+        }
+    }
+   
+}
