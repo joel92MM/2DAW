@@ -10,6 +10,9 @@ $bgcolor-section:blue;
 $padi:10px;
 
 
+$claro: lighten($bgcolor-articulos, 30%);
+$opues: complement($bgcolor-articulos);
+
 section{
     background-color: $bgcolor-section;
     padding: $padi;
@@ -19,8 +22,11 @@ section{
         margin: $mar;
         padding: $pad;
         
-        &:hover{
-            background-color: $color-articuloshover;
+        &:hover,
+         @if $active{
+            background-color: $claro;
+        }else{
+            background-color: $opues;
         }
     }
    
