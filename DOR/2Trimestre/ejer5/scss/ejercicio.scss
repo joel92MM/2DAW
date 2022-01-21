@@ -1,0 +1,18 @@
+@each $numeros,$wid,$bgC in (100-blue,100px,blue),(200-red,200px,red){
+    .flexible-#{$numeros}{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+
+             & > div {
+                width: $wid;
+                background-color: $bgC;
+                margin: 5px;
+                text-align: center;
+            }
+        
+    }
+ 
+}
+
