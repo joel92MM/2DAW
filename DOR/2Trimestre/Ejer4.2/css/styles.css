@@ -4,6 +4,7 @@
   color: black;
   background-color: white;
   border: 1px solid black;
+  box-shadow: suave;
   box-shadow: 1px 1px 3px black;
 }
 
@@ -13,6 +14,7 @@
   color: black;
   background-color: orange;
   border: 2px solid black;
+  box-shadow: fuerte;
   box-shadow: 6px 6px 12px black;
 }
 
@@ -22,7 +24,8 @@
   color: #660066;
   background-color: lightgreen;
   border: 3px solid #660066;
-  box-shadow: 3px 3px 6px black;
+  box-shadow: normal;
+  box-shadow: 6px 6px 12px #660066;
   text-align: center;
 }
 

@@ -1,12 +1,32 @@
-@each $temas,$colorT,$colorF,$bshdow,$shdow in (normal, black ,white ,1px solid black,1px 1px 3px black),
-                                        (aviso,black , orange,2px solid black,6px 6px 12px black),
-                                        (correcto, #660066, lightgreen,3px solid #660066 ,3px 3px 6px black){
-                                            .#{$temas}{
-                                                margin: 10px;
-                                                padding: 10px;
-                                                color:$colorT;
-                                                background-color: $colorF;
-                                                border:$bshdow;
-                                                box-shadow: $shdow;
-                                            }
-                                        }
+@each $temas,$colorT,$colorF,$bshdow,$shdow,$text in 
+
+(normal, black ,white ,1px ,suave,false),
+(aviso,black , orange,2px ,fuerte,false),
+(correcto, #660066, lightgreen,3px ,normal,true){
+         .#{$temas}{
+             margin: 10px;
+             padding: 10px;
+             color:#{$colorT};
+             background-color: #{$colorF};
+             border:#{$bshdow} solid #{$colorT};
+             box-shadow: $shdow;  
+         
+             @if $shdow ==suave {
+                 box-shadow: 1px 1px 3px #{$colorT};   
+             }@else if $shdow ==normal{
+                 box-shadow: 6px 6px 12px #{$colorT};
+             }@else if $shdow ==fuerte{
+                 box-shadow: 6px 6px 12px #{$colorT};
+                                                     
+             }                                 
+         
+             @if $text==true{
+                 text-align: center;
+             }
+                    }
+     
+                                        
+}
+
+
+
