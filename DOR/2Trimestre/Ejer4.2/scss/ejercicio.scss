@@ -1,5 +1,12 @@
-@for $i from 0 through 5{
-    .texto#{$i}{
-        font-size: 1rem+(0.2rem) * $i;
-    }
-}
+@each $temas,$colorT,$colorF,$bshdow,$shdow in (normal, black ,white ,1px solid black,1px 1px 3px black),
+                                        (aviso,black , orange,2px solid black,6px 6px 12px black),
+                                        (correcto, #660066, lightgreen,3px solid #660066 ,3px 3px 6px black){
+                                            .#{$temas}{
+                                                margin: 10px;
+                                                padding: 10px;
+                                                color:$colorT;
+                                                background-color: $colorF;
+                                                border:$bshdow;
+                                                box-shadow: $shdow;
+                                            }
+                                        }
