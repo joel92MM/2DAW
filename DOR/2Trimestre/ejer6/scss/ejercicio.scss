@@ -1,0 +1,8 @@
+@mixin miclase($color:#cc3366){
+    color: lighten($color, 5%);
+
+}
+
+.miclase h1{
+    @include miclase(#b82e5c);
+}
