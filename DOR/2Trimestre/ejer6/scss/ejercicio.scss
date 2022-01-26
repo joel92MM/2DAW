@@ -1,8 +1,15 @@
-@mixin miclase($color:#cc3366){
+@mixin miclase($color:#cc3366,$size:5rem){
     color: lighten($color, 5%);
+    font-size: $size;
 
 }
 
-.miclase h1{
-    @include miclase(#b82e5c);
+
+@for $i from 1 through 6{
+    .miclase h#{$i}{
+        @include miclase(#b82e5c);
+    }
 }
+
+
+
