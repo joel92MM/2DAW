@@ -1,8 +1,21 @@
-@mixin miclase($color:#cc3366){
-    color: lighten($color, 5%);
-
+@mixin miclase($co:#cc3366,$tam:5){
+  
+    $cambiaTama:5;
+    $contador:5%;
+    @for $i from 1 through 6{
+        $cambiaColor:$co;
+        $cambiaColor:darken($cambiaColor,$contador);
+         .miclase h#{$i}{
+           
+             font-size: ($cambiaTama)+rem;
+             color: $cambiaColor;
+        } 
+        $cambiaTama:($cambiaTama * 0.8);
+        $contador:$contador+5%;
+    }
 }
 
-.miclase h1{
-    @include miclase(#b82e5c);
-}
+@include miclase();
+
+
+
