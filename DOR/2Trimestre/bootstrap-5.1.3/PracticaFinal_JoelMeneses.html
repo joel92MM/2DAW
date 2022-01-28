@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!--google--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Galada&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Comic+Neue:wght@300&family=Galada&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap" rel="stylesheet">
+    <style>
+      .fondo{
+        background-image: url("media/fondoMadera.webp");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .tLetra{
+        font-family: 'Galada', cursive;        
+        font-size: 30px;
+        color: black;
+      }
+      .titu{
+        font-family: 'Audiowide', cursive;
+
+      }
+      .letra{
+        font-family: 'Comic Neue', cursive;
+
+      }
+      .navega{
+        font-family: 'Lexend Deca', sans-serif;
+      }
+      
+      @media screen and (max-width: 768px) {
+            .boton{
+                display:contents!important;
+            }
+        }
+    </style>
+    <title>Practica Final</title>
+  </head>
+  <script src="dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </symbol>
+  </svg>
+  <div class="alert alert-warning d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+    <div>
+      Próximamente actualizaremos más información sobre las peliculas y series actuales.
+    </div>
+  </div>
+    <!--barra de menu-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fondo">
+      <img src="media/jcinema.png" class="img-fluid  d-none d-lg-flex" alt="logo" width="100px" height="54px">
+
+      <a class="navbar-brand titu fs-3" href="#">
+        <img src="media/jcinema.png" class="img-fluid  d-lg-none" alt="logo" width="100px" height="54px">
+        NortFilms Studio</a>
+        <div class="container-fluid boton">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 navega mx-lg-auto ms-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Estrenos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="peliculas.html">Peliculas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="series.html">Series</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                  <span class="badge bg-warning">4</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Comedia</a></li>
+                  <li><a class="dropdown-item" href="#">Heroicas</a></li>
+                  <li><a class="dropdown-item" href="#">Terror</a></li>
+                  <li><a class="dropdown-item" href="#">Aventuras</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">No sigas buscando, esto es lo que hay</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Sigue buscando..." aria-label="Search">
+              <button class="btn btn-light" type="submit">Buscar</button>
+            </form>
+              <!--modal
+          -->
+          <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Login
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cuentas de usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--form-->
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más..</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recordar Contraseña</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                      <p class="text-center">Si eres un usuario nuevo, entra aquí -><a href="#" class="fw-bold"> Crear una nueva cuenta</a></p>
+                    <!--Fin-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Fin modal
+          -->
+          </div>
+        </div>
+      </nav>
+      <!--Fin menu navegacion-->
+      <!--Carrosel-->
+      <div class="row">
+        <div class="col-12 h-100">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" >
+              <div class="carousel-item active " data-bs-interval="10000" bg-secondary>
+                <img src="media/filmSpider.png" class="d-block w-100 img-fluid" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="media/filmThor2.png" class="d-block w-100" alt="..." >
+              </div>
+              <div class="carousel-item">
+                <img src="media/filmMatrix.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Fin Carrosel-->
+      <!--Miga de pan-->
+      <nav aria-label="breadcrumb" class="ps-2 mt-2">
+        <ol class="breadcrumb letra">
+          <li class="breadcrumb-item active"><a href="PracticaFinal_JoelMeneses.html">Inicio</a></li>
+          <li class="breadcrumb-item" aria-current="page">Heroes</li>
+        </ol>
+      </nav>
+      <!--Miga de pan-->
+      <div class="row">
+          <!--Acrodeon-->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button tLetra " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Peliculas destacadas de este mes
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <!--Cartas Peliculas-->
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-md-3 g-lg-1">
+                    <div class="col" >
+                      <div class="card h-100">
+                        <img src="media/filmThor.png" class="card-img-top" alt="..."  height="500px">
+                        <div class="card-body">
+                          <h5 class="card-title">Thor Love and Thunder</h5>
+                          <p class="card-text"> Jane Foster se convierte en la Diosa del Trueno y sustituye a Thor ya que esté deja de ser considerado digno de seguir portando el martillo.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="media/filmSpider.jpg" class="card-img-top" alt="..." height="500px">
+                        <div class="card-body">
+                          <h5 class="card-title">Spider-Man: No Way Home</h5>
+                          <p class="card-text">Después de que Mysterio desvelara la identidad de Spider-Man a todo el mundo en Lejos de casa, Peter Parker (Tom Holland), desesperado por volver a la normalidad y recuperar su anterior vida, pide ayuda a Doctor Strange para enmendar tal acción. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="media/filmMatrix.jpg" class="card-img-top" alt="..." height="500px">
+                        <div class="card-body">
+                          <h5 class="card-title">Matrix 4 Resurrections</h5>
+                          <p class="card-text">Neo vive una vida normal y corriente en San Francisco mientras su terapeuta le prescribe pastillas azules. Hasta que Morfeo le ofrece la pastilla roja y vuelve a abrir su mente al mundo de Matrix.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="media/filmCazafan.jpeg" class="card-img-top" alt="..." height="500px">
+                        <div class="card-body">
+                          <h5 class="card-title">Cazafantasmas: Más Allá</h5>
+                          <p class="card-text">Cuando una madre soltera y sus dos hijos se mudan a una nueva ciudad, pronto descubren que tienen una conexión con los Cazafantasmas originales y el legado secreto de su abuelo..</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!--Cartas Peliculas-->
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed tLetra" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Series destacadas de este mes
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <!--Series-->
+                  <div class="row row-cols-1 row-cols-md-3 g-4 w-100">
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                      <div class="card h-100">
+                        <img src="media/Netflix.png" class="card-img-top" alt="..." height="400px">
+                        <div class="card-body">
+                          <h5 class="card-title text-danger text-center">Netflix</h5>
+                        </div>
+                        <div class="card-footer text-center">
+                          <button class="btn btn-primary text-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Mostrar Series</button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                  <div class="offcanvas-header">
+                                    <h5 id="offcanvasRightLabel">Series</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                  </div>
+                                  <div class="offcanvas-body">
+                                    <!--Modal Netflix-->
+                                      <div class="row row-cols-1  row-cols-md-1 row-cols-lg-3  g-4">
+                                        <div class="col">
+                                          <div class="card">
+                                            <img src="media/papel.jpg" class="card-img-top w-100" alt="..." height="200px">
+                                            <div class="card-body">
+                                              <h5 class="card-title">La Casa de Papel</h5>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col">
+                                          <div class="card">
+                                            <img src="media/desorden.jpg" class="card-img-top " alt="..." height="200px">
+                                            <div class="card-body">
+                                              <h5 class="card-title">El desorden que dejas</h5>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col">
+                                          <div class="card">
+                                            <img src="media/maldicion.jpg" class="card-img-top " alt="..." height="200px">
+                                            <div class="card-body">
+                                              <h5 class="card-title">La Maldición de hill house</h5>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <!--Modal Netflix-->
+                                  </div>
+                                </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <div class="card h-100">
+                        <img src="media/hbo-max.jpg" class="card-img-top" alt="..." height="400px">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-primary">HBO Max</h5>
+                        </div>
+                        <div class="card-footer text-center">
+                          <!--oton-->
+                          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            Mostrar Series
+                          </button>
+                          
+                          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Series</h5>
+                              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                              <!--Modal HBO-->
+                                <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3  g-4">
+                                  <div class="col">
+                                    <div class="card">
+                                      <img src="media/Raisedwolves.jpg" class="card-img-top w-100" alt="..." height="200px">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Criado por los lobos</h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="card">
+                                      <img src="media/OUTSIDER.jpg" class="card-img-top " alt="..." height="200px">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Outsider</h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="card">
+                                      <img src="media/LASNUNCA.jpg" class="card-img-top " alt="..." height="200px">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Las Nunca</h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              <!--Modal HBO-->
+                            </div>
+                          </div>
+                           <!--boton-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <div class="card h-100">
+                        <img src="media/disney-plus.png" class="card-img-top" alt="..." height="400px">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-info">Disney Plus</h5>
+                        </div>
+                        <div class="card-footer text-center">
+                          <!--modal-->
+                          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Mostrar Series</button>
+
+                          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasBottomLabel">Series</h5>
+                              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body small">
+                               <!--Modal Disney-->
+                               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-6">
+                                <div class="col">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 class="card-title text-center">The Mandalorian</h5>
+                                    </div>
+                                    <img src="media/mandalori.jpg" class="card-img-top w-100" alt="..." height="200px">
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 class="card-title text-center">Bruja Escarlata y Visión</h5>
+                                    </div>
+                                    <img src="media/escarlata.jpg" class="card-img-top " alt="..." height="200px">
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="card">
+                                    <div class="card-body">
+                                      <h5 class="card-title text-center">Falcon y el soldado de Invierno</h5>
+                                    </div>
+                                    <img src="media/falcon.jpg" class="card-img-top " alt="..." height="200px">
+                                  </div>
+                                </div>
+                              </div>
+                            <!--Modal disney-->
+                            </div>
+                          </div>
+                          <!--disne-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Fin Series-->
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed tLetra" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Peliculas o series que puedes comprar
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <!--Comprar-->
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card h-100 border border-success">
+                        <img src="media/filmIron.jpg" class="card-img-top" alt="..." height="400px">
+                        <div class="card-body">
+                          <h5 class="card-title">Iron Man 3</h5>
+                          <p class="card-text">El descarado y brillante Tony Stark, tras ver destruido todo su universo personal, debe encontrar y enfrentarse a un enemigo cuyo poder no conoce límites. Este viaje pondrá a prueba su entereza una y otra vez, y le obligará a confiar en su ingenio.</p>
+                        </div>
+                        <div class="card-footer border border-danger">
+                          <small class="fw-bolder text-danger text-center">Precio: 20€</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 border border-success">
+                        <img src="media/filmSuper.jpg" class="card-img-top" alt="..."   height="400px">
+                        <div class="card-body">
+                          <h5 class="card-title">Supersalidos</h5>
+                          <p class="card-text">Cuento adolescente con moraleja sobre dos inadaptados sociales adolescentes que están a punto de graduarse en el instituto.</p>
+                        </div>
+                        <div class="card-footer border border-danger">
+                          <small class="fw-bolder text-danger">Precio: 10€</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100 border border-success">
+                        <img src="media/filmTed.jpg" class="card-img-top" alt="..."  height="400px">
+                        <div class="card-body">
+                          <h5 class="card-title">Ted</h5>
+                          <p class="card-text"> Cuando John Bennett era pequeño, deseaba que su osito de peluche Ted fuera un oso de verdad y, por desgracia, su sueño se hizo realidad</p>
+                        </div>
+                        <div class="card-footer border border-danger">
+                          <small class="fw-bolder text-danger">Precio 10€</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!--Comprar-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fin Acrdeon-->
+      </div>
+
+     
+       <!--footer-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="nav-link disabled" href="#">Derechos reservados a los cotillas</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#footer" aria-controls="footer" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="footer">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                    <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                  </svg>
+                  Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="https://www.marvel.com/">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-markdown" viewBox="0 0 16 16">
+                    <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                    <path fill-rule="evenodd" d="M9.146 8.146a.5.5 0 0 1 .708 0L11.5 9.793l1.646-1.647a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M11.5 5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M3.56 11V7.01h.056l1.428 3.239h.774l1.42-3.24h.056V11h1.073V5.001h-1.2l-1.71 3.894h-.039l-1.71-3.894H2.5V11h1.06z"/>
+                  </svg>
+                  Marvel</a>
+              </li>
+              <li class="nav-item dropup">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dribbble" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8zm5.284 3.688a6.802 6.802 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A6.95 6.95 0 0 1 8 1.18zm-2.907.642A43.123 43.123 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.865 6.865 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.817 6.817 0 0 1-1.752-4.564zM8 14.837a6.785 6.785 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.246 28.246 0 0 1 1.457 5.18A6.722 6.722 0 0 1 8 14.837zm3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.774 6.774 0 0 1-2.924 4.573z"/>
+                  </svg>
+                  Redes Sociales
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="https://www.instagram.com/?hl=es">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="brown" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                      </svg>
+                      Instagram</a></li>
+                  <li><a class="dropdown-item" href="https://es-es.facebook.com/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                    Facebook</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Jesús Joel Meneses Meneses, 2021</a>
+              </li>
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+      <!--Fin footer-->
+  </body>
+</html>
