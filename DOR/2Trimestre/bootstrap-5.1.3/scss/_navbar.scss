@@ -246,7 +246,7 @@
 
   .navbar-nav {
     .nav-link {
-      color: $navbar-light-color;
+      color: $primary;
 
       &:hover,
       &:focus {
@@ -274,7 +274,7 @@
   }
 
   .navbar-text {
-    color: $navbar-light-color;
+    color: red;
 
     a,
     a:hover,

@@ -574,8 +574,10 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
+
+$font-family-sans-serif:      verdana !default;
+$font-family-monospace:       arial !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
@@ -588,9 +590,9 @@ $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
 $font-weight-lighter:         lighter !default;
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
+$font-weight-light:           3300 !default;
+$font-weight-normal:          4030 !default;
+$font-weight-bold:            7030 !default;
 $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
@@ -1084,7 +1086,7 @@ $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                1rem !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              null !default;
-$nav-link-color:                    $link-color !default;
+$nav-link-color:                    $primary !default;
 $nav-link-hover-color:              $link-hover-color !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           $gray-600 !default;
@@ -1127,9 +1129,9 @@ $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
 // scss-docs-end navbar-variables
 
 // scss-docs-start navbar-theme-variables
-$navbar-dark-color:                 rgba($white, .55) !default;
+$navbar-dark-color:                 $primary !default;
 $navbar-dark-hover-color:           rgba($white, .75) !default;
-$navbar-dark-active-color:          $white !default;
+$navbar-dark-active-color:          $primary !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
@@ -1153,14 +1155,14 @@ $navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
 // Dropdown menu container and contents.
 
 // scss-docs-start dropdown-variables
-$dropdown-min-width:                10rem !default;
+$dropdown-min-width:                100rem !default;
 $dropdown-padding-x:                0 !default;
-$dropdown-padding-y:                .5rem !default;
+$dropdown-padding-y:                .50rem !default;
 $dropdown-spacer:                   .125rem !default;
 $dropdown-font-size:                $font-size-base !default;
-$dropdown-color:                    $body-color !default;
-$dropdown-bg:                       $white !default;
-$dropdown-border-color:             rgba($black, .15) !default;
+$dropdown-color:                   green !important;
+$dropdown-bg:                      green !important;
+$dropdown-border-color:             green !important;
 $dropdown-border-radius:            $border-radius !default;
 $dropdown-border-width:             $border-width !default;
 $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;

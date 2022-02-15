@@ -4,6 +4,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap");
 .clearfix::after {
   display: block;
   clear: both;
@@ -1199,7 +1200,7 @@
 }
 
 .fw-light {
-  font-weight: 300 !important;
+  font-weight: 3300 !important;
 }
 
 .fw-lighter {
@@ -1207,11 +1208,11 @@
 }
 
 .fw-normal {
-  font-weight: 400 !important;
+  font-weight: 4030 !important;
 }
 
 .fw-bold {
-  font-weight: 700 !important;
+  font-weight: 7030 !important;
 }
 
 .fw-bolder {
