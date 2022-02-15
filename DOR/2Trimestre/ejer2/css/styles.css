@@ -3,126 +3,98 @@
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
-  padding: 0.5rem;
-}
-.btn:hover {
-  box-shadow: 0.2rem 0.2rem black;
-}
-.btn:active {
-  background-color: orange;
-  color: white;
-}
+  padding: 0.5rem; }
+  .btn:hover {
+    box-shadow: 0.2rem 0.2rem black; }
+  .btn:active {
+    background-color: orange;
+    color: white; }
 
 .btn-error {
-  background-color: red;
-}
+  background-color: red; }
 
 .btn-warning {
-  background-color: yellow;
-}
+  background-color: yellow; }
 
 .btn-accepted {
-  background-color: green;
-}
+  background-color: green; }
 
 .btn-normal {
-  background-color: blue;
-}
+  background-color: blue; }
 
 table {
-  border-collapse: collapse;
-}
+  border-collapse: collapse; }
 
 th,
 td {
   border: 1px solid;
-  padding: 1rem;
-}
+  padding: 1rem; }
 
 tbody tr td:nth-child(1) {
-  background-color: #423f3f;
-}
+  background-color: #423f3f; }
 
 tbody tr td:nth-child(2) {
-  background-color: #a5a5a5;
-}
+  background-color: #a5a5a5; }
 
 tbody tr td:nth-child(3) {
-  background-color: #423f3f;
-}
+  background-color: #423f3f; }
 
 tbody tr td:nth-child(4) {
-  background-color: #a5a5a5;
-}
+  background-color: #a5a5a5; }
 
 tbody tr td:nth-child(5) {
-  background-color: #423f3f;
-}
+  background-color: #423f3f; }
 
 tbody tr td:nth-child(6) {
-  background-color: #a5a5a5;
-}
+  background-color: #a5a5a5; }
 
 tbody tr td:nth-child(7) {
-  background-color: #423f3f;
-}
+  background-color: #423f3f; }
 
 tbody tr td:nth-child(8) {
-  background-color: #a5a5a5;
-}
+  background-color: #a5a5a5; }
 
 tbody tr td:nth-child(9) {
-  background-color: #423f3f;
-}
+  background-color: #423f3f; }
 
 .row {
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: row; }
 
 .row > * {
   border: 1px solid black;
-  height: 150px;
-}
+  height: 150px; }
 
 .row > .col-1 {
   padding: 1rem;
-  width: 12.5%;
-}
+  width: 12.5+ "%"; }
 
 .row > .col-2 {
   padding: 1rem;
-  width: 25%;
-}
+  width: 25+ "%"; }
 
 .row > .col-3 {
   padding: 1rem;
-  width: 37.5%;
-}
+  width: 37.5+ "%"; }
 
 .row > .col-4 {
   padding: 1rem;
-  width: 50%;
-}
+  width: 50+ "%"; }
 
 .row > .col-5 {
   padding: 1rem;
-  width: 62.5%;
-}
+  width: 62.5+ "%"; }
 
 .row > .col-6 {
   padding: 1rem;
-  width: 75%;
-}
+  width: 75+ "%"; }
 
 .row > .col-7 {
   padding: 1rem;
-  width: 87.5%;
-}
+  width: 87.5+ "%"; }
 
 .row > .col-8 {
   padding: 1rem;
-  width: 100%;
-}
+  width: 100+ "%"; }
 
 /*# sourceMappingURL=styles.css.map */
