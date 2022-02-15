@@ -1,0 +1,16 @@
+
+@for $i from 1 through 4{
+    .width-#{$i}{width:($i+10)+em;}
+}
+@for $i from 1 through 4{
+    $width: 25;
+    .height-#{$i}{
+        
+        width:($width)+em ;
+        
+    }
+    $width:$width+25;
+
+}
+
+     

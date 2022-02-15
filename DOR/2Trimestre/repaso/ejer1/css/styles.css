@@ -1,0 +1,127 @@
+.item-1 {
+  width: 2em;
+  color: #0d0d0d;
+  background-color: #e60000;
+}
+.item-1:hover {
+  background-color: #ffa90a;
+}
+
+.item-2 {
+  width: 4em;
+  color: #1a1a1a;
+  background-color: #cc0000;
+}
+.item-2:hover {
+  background-color: #ffac14;
+}
+
+.item-3 {
+  width: 6em;
+  color: #262626;
+  background-color: #b30000;
+}
+.item-3:hover {
+  background-color: #ffb01f;
+}
+
+.item-4 {
+  width: 8em;
+  color: #333333;
+  background-color: #990000;
+}
+.item-4:hover {
+  background-color: #ffb329;
+}
+
+.item-5 {
+  width: 10em;
+  color: #404040;
+  background-color: maroon;
+}
+.item-5:hover {
+  background-color: #ffb733;
+}
+
+.item-6 {
+  width: 12em;
+  color: #4d4d4d;
+  background-color: #660000;
+}
+.item-6:hover {
+  background-color: #ffbb3d;
+}
+
+.item-7 {
+  width: 14em;
+  color: #595959;
+  background-color: #4d0000;
+}
+.item-7:hover {
+  background-color: #ffbe47;
+}
+
+.item-1 {
+  width: 2em;
+  color: #0d0d0d;
+  background-color: #e60000;
+}
+.item-1:hover {
+  background-color: #ffa90a;
+}
+
+.item-2 {
+  width: 4em;
+  color: #1a1a1a;
+  background-color: #cc0000;
+}
+.item-2:hover {
+  background-color: #ffac14;
+}
+
+.item-3 {
+  width: 6em;
+  color: #262626;
+  background-color: #b30000;
+}
+.item-3:hover {
+  background-color: #ffb01f;
+}
+
+.item-4 {
+  width: 8em;
+  color: #333333;
+  background-color: #990000;
+}
+.item-4:hover {
+  background-color: #ffb329;
+}
+
+.item-5 {
+  width: 10em;
+  color: #404040;
+  background-color: maroon;
+}
+.item-5:hover {
+  background-color: #ffb733;
+}
+
+.item-6 {
+  width: 12em;
+  color: #4d4d4d;
+  background-color: #660000;
+}
+.item-6:hover {
+  background-color: #ffbb3d;
+}
+
+.item-7 {
+  width: 14em;
+  color: #595959;
+  background-color: #4d0000;
+}
+.item-7:hover {
+  background-color: #ffbe47;
+}
+
+/*# sourceMappingURL=styles.css.map */

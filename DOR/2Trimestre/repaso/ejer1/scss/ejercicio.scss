@@ -1,0 +1,32 @@
+
+@for $i from 1 through 7{
+    $varia:1;
+    $cur:1;
+    .item-#{$i}{
+            width:($i*2)+em ;
+            $varia:(5%*$i);
+            color: lighten( #000000,$varia); 
+            background-color: darken(red, $varia);    
+            $cur:(2%*$i);
+            &:hover{
+                background-color: lighten(orange,$cur);
+            }
+    }
+}
+$contador:1;
+@while $contador < 8{
+    $varia:1;
+    $cur:1;
+    .item-#{$contador}{
+        width:($contador*2)+em ;
+            $varia:(5%*$contador);
+            color: lighten( #000000,$varia); 
+            background-color: darken(red, $varia);    
+            $cur:(2%*$contador);
+            &:hover{
+                background-color: lighten(orange,$cur);
+            }
+    }
+    $contador:$contador+1;
+}
+
